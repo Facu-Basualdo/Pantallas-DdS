@@ -156,6 +156,7 @@
     </style>
     <script id="tailwind-config">
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
@@ -164,9 +165,15 @@
                         surface: '#f4f6fa',
                     },
                     borderRadius: {
-                        'xl': '1.5rem',
-                        '2xl': '2rem',
-                        '3xl': '2.5rem',
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Lexend"]
                     }
                 }
             }
