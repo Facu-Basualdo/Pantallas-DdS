@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffe088",
+                        "on-surface-variant": "#444650",
+                        "on-tertiary-fixed-variant": "#003ab1",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-dim": "#d9dadb",
+                        "tertiary": "#000f3f",
+                        "outline-variant": "#c5c6d2",
+                        "surface-tint": "#435b9f",
+                        "secondary": "#735c00",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "on-secondary-container": "#745c00",
+                        "inverse-primary": "#b3c5ff",
+                        "secondary-container": "#fed65b",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-primary-fixed-variant": "#2a4386",
+                        "primary-container": "#002366",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed": "#dce1ff",
+                        "on-tertiary-container": "#6588ff",
+                        "outline": "#757682",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary-fixed": "#00174a",
+                        "on-tertiary-fixed": "#00164f",
+                        "surface-container": "#edeeef",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#00113a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1d",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-primary-container": "#758dd5",
+                        "tertiary-container": "#00216d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(20px);
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface">
+    <!-- SideNavBar Implementation -->
+    <aside class="fixed left-0 top-0 flex flex-col h-full z-40 bg-blue-950 dark:bg-slate-950 h-screen w-64 border-r-0"
+        id="sidebar">
+        <div class="px-6 py-8">
+            <h1 class="text-xl font-bold tracking-tighter text-amber-400 dark:text-amber-300">Las Leonas Admin</h1>
+            <p class="text-xs text-blue-200/50 uppercase tracking-widest mt-1 font-semibold">Vanguard Dashboard</p>
+        </div>
+        <nav class="flex-1 px-4 space-y-2">
+            <!-- Active: Players List -->
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-amber-400 font-bold border-r-4 border-amber-400 bg-blue-900/30 transition-colors duration-200"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="groups">groups</span>
+                <span class="font-label">Players List</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-blue-200/70 hover:text-white hover:bg-blue-900/50 transition-colors duration-200"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="payments">payments</span>
+                <span class="font-label">Payments Overview</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-blue-200/70 hover:text-white hover:bg-blue-900/50 transition-colors duration-200"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="category">category</span>
+                <span class="font-label">Categories</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-blue-200/70 hover:text-white hover:bg-blue-900/50 transition-colors duration-200"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <span class="font-label">Settings</span>
+            </a>
+        </nav>
+        <div class="p-4 mt-auto">
+            <button
+                class="w-full py-4 bg-secondary-container text-on-secondary-container font-bold rounded-xl flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-amber-900/20">
+                <span class="material-symbols-outlined" data-icon="add">add</span>
+                Add New Player
+            </button>
+            <div class="mt-6 flex items-center gap-3 px-4 py-3 bg-blue-900/20 rounded-xl">
+                <img class="w-10 h-10 rounded-full object-cover"
+                    data-alt="professional female sports administrator portrait in a clean modern office setting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdjBTLZmq2ToWTWnryoW5HCrdCXhdu7_i5bxYV4DNPSO0fqqvqOeaN0EpmcrfHo9UTcDDaME1NbBm8PQhXkOf80sWYWb_seMFF4gqmMiv5UKZ1sZ7tyfUMuj_lv9JWK8AbCdlh6_qbeR4XqCcmhsuzim76QxkPCe9MeBSBN-lEyNFGPieWyGFkHFBi255WwclwmaCC6FJ1LmYXLgLcAYY9B8bZSRbiRLgaj6eZ5VUKOdRAy5Tz1J3ZJnEodxf2fdxAk_4L5VtruDjm" />
+                <div class="overflow-hidden">
+                    <p class="text-sm font-bold text-white truncate">Admin User</p>
+                    <p class="text-xs text-blue-200/60 truncate">Club Director</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content Canvas -->
+    <main class="ml-64 min-h-screen">
+        <!-- TopNavBar Implementation -->
+        <header
+            class="sticky top-0 w-full flex justify-between items-center px-8 py-4 z-30 bg-white/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+            <div class="flex items-center gap-4">
+                <h2 class="text-2xl font-black text-blue-950 dark:text-white tracking-tight">Las Leonas del Sur</h2>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="relative group">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-amber-500 transition-colors"
+                        data-icon="search">search</span>
+                    <input
+                        class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full w-64 focus:ring-2 focus:ring-amber-400 text-sm"
+                        placeholder="Buscar jugadora..." type="text" />
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-blue-900/60 hover:text-amber-500 transition-all">
+                        <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+                    </button>
+                    <button class="p-2 text-blue-900/60 hover:text-amber-500 transition-all">
+                        <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Content Area -->
+        <div class="p-8 max-w-7xl mx-auto">
+            <!-- Page Header with Filter -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                <div>
+                    <h3 class="text-4xl font-extrabold text-primary tracking-tighter leading-none mb-2">Listado de
+                        Jugadoras</h3>
+                    <div class="flex items-center gap-2 text-on-surface-variant font-medium">
+                        <span class="material-symbols-outlined text-amber-500 text-sm"
+                            data-icon="calendar_today">calendar_today</span>
+                        <span>Periodo Lectivo: 2024</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-white p-1 rounded-xl shadow-sm">
+                    <button
+                        class="px-4 py-2 bg-primary text-white rounded-lg font-bold text-sm shadow-md">Todas</button>
+                    <button
+                        class="px-4 py-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg font-bold text-sm transition-colors">Federadas</button>
+                    <button
+                        class="px-4 py-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg font-bold text-sm transition-colors">Becadas</button>
+                </div>
+            </div>
+            <!-- Bento-style Grid for Categories -->
+            <div class="space-y-12">
+                <!-- Category Section: Primera -->
+                <section>
+                    <div class="flex items-center justify-between mb-6 border-l-4 border-amber-400 pl-4">
+                        <h4 class="text-xl font-bold text-primary tracking-tight">Primera División</h4>
+                        <span
+                            class="px-3 py-1 bg-primary-container text-on-primary-container text-xs font-black rounded-full uppercase tracking-wider">Elite
+                            Performance</span>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-outline-variant/10">
+                        <table class="w-full text-left border-collapse">
+                            <thead
+                                class="bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-widest">
+                                <tr>
+                                    <th class="px-6 py-4">Jugadora</th>
+                                    <th class="px-6 py-4">ID Socio</th>
+                                    <th class="px-6 py-4">Posición</th>
+                                    <th class="px-6 py-4">Estado</th>
+                                    <th class="px-6 py-4 text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-surface-container-high">
+                                <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-black text-sm">
+                                                MC</div>
+                                            <div>
+                                                <p class="font-bold text-primary">Martina Cavallo</p>
+                                                <p class="text-xs text-on-surface-variant">martina.c@leonas.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 font-mono text-sm text-on-surface-variant">#2024-00124</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="text-xs font-bold px-2 py-1 bg-surface-container-high rounded text-primary">Delantera</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                            <span class="text-sm font-semibold text-emerald-700">Activa</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 hover:bg-amber-50 rounded-lg text-outline hover:text-amber-600 transition-all">
+                                            <span class="material-symbols-outlined"
+                                                data-icon="more_vert">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-black text-sm">
+                                                LR</div>
+                                            <div>
+                                                <p class="font-bold text-primary">Lucía Rodríguez</p>
+                                                <p class="text-xs text-on-surface-variant">lucia.rod@leonas.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 font-mono text-sm text-on-surface-variant">#2024-00156</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="text-xs font-bold px-2 py-1 bg-surface-container-high rounded text-primary">Portera</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                            <span class="text-sm font-semibold text-emerald-700">Activa</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 hover:bg-amber-50 rounded-lg text-outline hover:text-amber-600 transition-all">
+                                            <span class="material-symbols-outlined"
+                                                data-icon="more_vert">more_vert</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <!-- Category Section: Sub-17 & Sub-14 (Grid Layout) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Sub-17 Card -->
+                    <section class="bg-surface-container-low rounded-3xl p-6 relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="text-xl font-bold text-primary">Sub-17</h4>
+                                <span class="material-symbols-outlined text-amber-500" data-icon="star"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div
+                                    class="bg-white p-4 rounded-2xl flex items-center justify-between shadow-sm border border-outline-variant/10 hover:translate-x-1 transition-transform cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center font-bold text-xs">
+                                            SG</div>
+                                        <div>
+                                            <p class="font-bold text-sm text-primary">Sofía García</p>
+                                            <p class="text-[10px] text-on-surface-variant">ID: 00452</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full uppercase">Activa</span>
+                                </div>
+                                <div
+                                    class="bg-white p-4 rounded-2xl flex items-center justify-between shadow-sm border border-outline-variant/10 hover:translate-x-1 transition-transform cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center font-bold text-xs">
+                                            AM</div>
+                                        <div>
+                                            <p class="font-bold text-sm text-primary">Ana Martínez</p>
+                                            <p class="text-[10px] text-on-surface-variant">ID: 00458</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-black bg-red-100 text-red-800 px-2 py-0.5 rounded-full uppercase">Inactiva</span>
+                                </div>
+                            </div>
+                            <button
+                                class="mt-6 w-full py-3 text-sm font-bold text-primary hover:text-amber-600 flex items-center justify-center gap-2 transition-colors">
+                                Ver todas las jugadoras Sub-17
+                                <span class="material-symbols-outlined text-sm"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                    </section>
+                    <!-- Sub-14 Card -->
+                    <section class="bg-primary text-white rounded-3xl p-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-10">
+                            <span class="material-symbols-outlined text-9xl"
+                                data-icon="sports_soccer">sports_soccer</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="text-xl font-bold">Sub-14</h4>
+                                <span
+                                    class="px-2 py-1 bg-amber-400 text-primary text-[10px] font-black rounded uppercase">Promesas</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div
+                                    class="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex items-center justify-between border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-amber-400 text-primary flex items-center justify-center font-bold text-xs">
+                                            EV</div>
+                                        <div>
+                                            <p class="font-bold text-sm">Elena Valdes</p>
+                                            <p class="text-[10px] text-white/60">ID: 00612</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-amber-400 text-sm"
+                                        data-icon="check_circle">check_circle</span>
+                                </div>
+                                <div
+                                    class="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex items-center justify-between border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-amber-400 text-primary flex items-center justify-center font-bold text-xs">
+                                            CP</div>
+                                        <div>
+                                            <p class="font-bold text-sm">Carla Ponce</p>
+                                            <p class="text-[10px] text-white/60">ID: 00615</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-amber-400 text-sm"
+                                        data-icon="check_circle">check_circle</span>
+                                </div>
+                            </div>
+                            <button
+                                class="mt-6 w-full py-3 text-sm font-bold text-amber-400 hover:text-white flex items-center justify-center gap-2 transition-colors">
+                                Gestionar Categoría Sub-14
+                                <span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+                <!-- Category Section: Infantiles & Sub-12 (Tonal shift section) -->
+                <section class="bg-surface-container-lowest rounded-[2rem] p-10 border border-outline-variant/20">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="bg-secondary-container p-3 rounded-2xl">
+                            <span class="material-symbols-outlined text-on-secondary-container"
+                                data-icon="child_care">child_care</span>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-black text-primary tracking-tight">Escuela de Formación</h4>
+                            <p class="text-sm text-on-surface-variant">Infantiles y Sub-12</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Quick Stats / Overview for Juniors -->
+                        <div class="p-4 bg-surface rounded-2xl border border-outline-variant/10 text-center">
+                            <p class="text-3xl font-black text-primary mb-1">42</p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Total
+                                Niñas</p>
+                        </div>
+                        <div class="p-4 bg-surface rounded-2xl border border-outline-variant/10 text-center">
+                            <p class="text-3xl font-black text-amber-500 mb-1">12</p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Nuevos
+                                Ingresos</p>
+                        </div>
+                        <div class="p-4 bg-surface rounded-2xl border border-outline-variant/10 text-center">
+                            <p class="text-3xl font-black text-primary mb-1">98%</p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+                                Asistencia Med.</p>
+                        </div>
+                        <div
+                            class="p-4 bg-primary text-white rounded-2xl text-center flex flex-col justify-center items-center cursor-pointer hover:bg-primary-container transition-colors">
+                            <span class="material-symbols-outlined mb-1" data-icon="list_alt">list_alt</span>
+                            <p class="text-[10px] font-black uppercase tracking-widest">Ver Registro</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Footer Branding -->
+        <footer class="p-8 mt-12 border-t border-outline-variant/10 text-center">
+            <p class="text-xs text-on-surface-variant/40 font-bold uppercase tracking-[0.2em]">Sistema de Gestión
+                Vanguard • Las Leonas del Sur © 2024</p>
+        </footer>
+    </main>
+    <!-- Contextual FAB for Mobile (Hidden on desktop as per Shell Rules) -->
+    <div class="fixed bottom-8 right-8 md:hidden">
+        <button
+            class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-2xl flex items-center justify-center">
+            <span class="material-symbols-outlined" data-icon="add">add</span>
+        </button>
+    </div>
+</body>
+
+</html>

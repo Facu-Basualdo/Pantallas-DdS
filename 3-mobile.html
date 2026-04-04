@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "on-surface": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed-variant": "#003ab1",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary-container": "#745c00",
+                        "surface-bright": "#f8f9fa",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#b3c5ff",
+                        "tertiary-fixed": "#dce1ff",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#000f3f",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-primary-container": "#758dd5",
+                        "outline": "#757682",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#435b9f",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-container": "#6588ff",
+                        "on-secondary-fixed-variant": "#574500",
+                        "outline-variant": "#c5c6d2",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#444650",
+                        "on-primary-fixed": "#00174a",
+                        "secondary": "#735c00",
+                        "on-primary-fixed-variant": "#2a4386",
+                        "on-tertiary-fixed": "#00164f",
+                        "error-container": "#ffdad6",
+                        "on-background": "#191c1d",
+                        "primary": "#00113a",
+                        "error": "#ba1a1a",
+                        "primary-container": "#002366",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#00216d",
+                        "background": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body min-h-screen pb-24">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-blue-900" data-icon="menu">menu</span>
+            <h1 class="text-xl font-bold tracking-tighter text-blue-900 font-headline">Athletic Vanguard</h1>
+        </div>
+        <div class="h-8 w-8 rounded-full bg-primary-container overflow-hidden">
+            <img alt="Admin Profile" class="h-full w-full object-cover"
+                data-alt="Close-up portrait of a professional woman with a confident expression in a brightly lit modern office setting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTCTqSAiEt6bx3O2misChUo6UbjBJSSoAW8-KSTu2xVOPrV9J19akz5q94NfnzcdknKJXE2iPv8Wt4sAnHpxizBTpVqlyG8wbE-Z0HNfMN9EQZUZIvTcABqRsXcuf1zqvcqfGg38g5eNYdurYAJ9xSqzlNIW-XonnCstiNdJAXqdxYv7UhGy-24DmXbBNjhmvC8uAG3opbeXikBdyrhEWeyzRxiyOHbBZlxhFiWwsidoogl_G8YhF6ImLskCWI7bFmZoETU3ioJKG6" />
+        </div>
+    </header>
+    <main class="pt-20 px-4">
+        <!-- Dashboard Sub-Header & Period Filter -->
+        <section class="mb-6 flex justify-between items-end">
+            <div>
+                <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Academy Portal</p>
+                <h2 class="text-3xl font-headline font-extrabold text-primary tracking-tight">Athletes</h2>
+            </div>
+            <div class="bg-surface-container-high px-3 py-2 rounded-xl flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-primary"
+                    data-icon="calendar_today">calendar_today</span>
+                <span class="text-xs font-bold font-headline text-primary">Season 2024</span>
+            </div>
+        </section>
+        <!-- Category Horizontal Tabs -->
+        <nav class="flex gap-2 overflow-x-auto pb-4 mb-4 -mx-4 px-4 no-scrollbar">
+            <button
+                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-sm shadow-sm">
+                Infantiles
+            </button>
+            <button
+                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
+                Sub-12
+            </button>
+            <button
+                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
+                Sub-14
+            </button>
+            <button
+                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
+                Sub-17
+            </button>
+        </nav>
+        <!-- Player List (Bento-style list) -->
+        <div class="space-y-4">
+            <!-- Player Card 1 -->
+            <div
+                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
+                <div class="relative">
+                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
+                        data-alt="Action portrait of a young female soccer player smiling with hair tied back, natural lighting, soft outdoor background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkO_9lL8Lg8_oLMBscfjkWh7l6Ot0L61chVrdnom8NMpHP_5ErFqlC7_zUAvO0a4ubJop9ePTDkm88_xl68BjQFDuc6OCgbmBXa_riCYhO-VnY28y2S7DvnvBSXhwDFRCG4NQXsopRIxjy-iIt2Gv4qQPaui0JM49_D7tvp6JTy3oWiyOQdWVWoV-5gNUoRYfIHVkNn7EeOveff-6o5e8Q_sVaSZiMm_m9k1uuGYUaolzeOB_vnrQGXIUedPwFJAbcieg8ZHOeLm3r" />
+                    <div
+                        class="absolute -bottom-1 -right-1 bg-secondary w-5 h-5 rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[12px] text-white" data-icon="star"
+                            data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Sofia Rodriguez</h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Active •
+                            Starter</span>
+                    </div>
+                </div>
+                <button
+                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+                </button>
+            </div>
+            <!-- Player Card 2 -->
+            <div
+                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
+                <div class="relative">
+                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-transparent"
+                        data-alt="Close-up of a young girl with athletic wear, determined expression, bright stadium lighting background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK46M_VvhqpKHmLpa4HAeOsuA1jFKNSMGKesmdw9MbaFqbxccUy7Zxhc4xVJeBMh3CHCI4gXRDwVXvwxirrbs1SFsRnPtms70aCRUdxMC2sdINJyvOCci0FRCMftgZB6YmWO678mN62tRsa7MKca_03cdCrweQUrFcSwL-ArxFi9MPDFJVra43CEXCctJnYrI_RDuNeqPpDCm8RED9ElZdw6VP1cTpPKzBq2XMrwap_2JQMmoLeN_V5nKJ_hYq3VNP5wdktFEhnOp5" />
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Elena Martinez</h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Active •
+                            Reserve</span>
+                    </div>
+                </div>
+                <button
+                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary transition-colors">
+                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+                </button>
+            </div>
+            <!-- Player Card 3 -->
+            <div
+                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
+                <div class="relative">
+                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-transparent"
+                        data-alt="Professional profile of a young female athlete in a navy jersey, soft lighting, clean studio background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4rPNZJ5_a_peBKpN7nXKVsvXFOU1XtQFn1BcoPKLyGhCE6L5loyaGYbDmPoDbHZLAWutum5HC0CgaN7J24UJI8gmqMNEl3vDC_Mx7z4jx4J5sVNoC6JdkfSOvsJHuzNlve07EY5CHXyHH-sxVqCusPJDFE-LWbpnAZHhU2Jv3EC4hCP1_TJBT6iOxxyhxY0hwA42iAMOYi7QuNIfuyxfpxdvarXmMHgAhxTg_DZCznG_wcAzLG8GQGEzl0hWA1E0hRmZWA6d4Uhji" />
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Lucia Gomez</h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Injured •
+                            Physical Therapy</span>
+                    </div>
+                </div>
+                <button
+                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary transition-colors">
+                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+                </button>
+            </div>
+            <!-- Player Card 4 -->
+            <div
+                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
+                <div class="relative">
+                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-transparent"
+                        data-alt="Young athlete with high ponytail, focused look, outdoor athletics track background with warm sunset glow"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBSf3C141veTE7PLzlga0P72KF8Hp3HRpBeyaufb1EYQhGn-glNKV4Vc69PNtemQH8Cq_LwfAMyu-iOTRpS3-clVGCqzzQu3yeZjcaY-CJT0eErtxgj68wJBkFfR4fXmMzXVB_i_6haP3HeS-Ct8Jh72isGX0y3sY_u7Az0Bw_juKc4VPaECtd9jUNphgcVtmiGxFi44ZIEmD1D3M6NHfyP5MM4dhOGPvl2TSxNjE940D_UzDFIbrq7PCglb3N_31ivN5OAdHZj3RI" />
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Valentina Silva</h3>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Active •
+                            Prospect</span>
+                    </div>
+                </div>
+                <button
+                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary transition-colors">
+                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+                </button>
+            </div>
+            <!-- Stat Summary Floating Card -->
+            <div class="bg-primary p-6 rounded-full mt-8 shadow-xl">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-secondary font-headline text-2xl font-black">24</p>
+                        <p class="text-white/70 text-[10px] font-label uppercase tracking-widest">Total Athletes</p>
+                    </div>
+                    <div class="h-10 w-[1px] bg-white/10"></div>
+                    <div>
+                        <p class="text-white font-headline text-2xl font-black">18</p>
+                        <p class="text-white/70 text-[10px] font-label uppercase tracking-widest">In Training</p>
+                    </div>
+                    <div class="h-10 w-[1px] bg-white/10"></div>
+                    <div>
+                        <p class="text-secondary font-headline text-2xl font-black">92%</p>
+                        <p class="text-white/70 text-[10px] font-label uppercase tracking-widest">Attendance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-2 bg-blue-900/90 backdrop-blur-2xl rounded-t-3xl z-50 shadow-[0_-8px_32px_rgba(0,0,0,0.1)]">
+        <a class="flex flex-col items-center justify-center text-slate-300 px-4 py-2 hover:bg-white/5 transition-colors active:scale-90 duration-200"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Dashboard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-amber-400/10 text-amber-400 rounded-xl px-4 py-2 active:scale-90 duration-200"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="groups" data-weight="fill"
+                style="font-variation-settings: 'FILL' 1;">groups</span>
+            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Athletes</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-300 px-4 py-2 hover:bg-white/5 transition-colors active:scale-90 duration-200"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Events</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-300 px-4 py-2 hover:bg-white/5 transition-colors active:scale-90 duration-200"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Settings</span>
+        </a>
+    </nav>
+</body>
+
+</html>

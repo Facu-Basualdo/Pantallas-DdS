@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "on-surface": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed-variant": "#003ab1",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary-container": "#745c00",
+                        "surface-bright": "#f8f9fa",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#b3c5ff",
+                        "tertiary-fixed": "#dce1ff",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#000f3f",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-primary-container": "#758dd5",
+                        "outline": "#757682",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#435b9f",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-container": "#6588ff",
+                        "on-secondary-fixed-variant": "#574500",
+                        "outline-variant": "#c5c6d2",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#444650",
+                        "on-primary-fixed": "#00174a",
+                        "secondary": "#735c00",
+                        "on-primary-fixed-variant": "#2a4386",
+                        "on-tertiary-fixed": "#00164f",
+                        "error-container": "#ffdad6",
+                        "on-background": "#191c1d",
+                        "primary": "#00113a",
+                        "error": "#ba1a1a",
+                        "primary-container": "#002366",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#00216d",
+                        "background": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Lexend"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-lexend {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface">
+    <!-- SideNavBar -->
+    <aside
+        class="h-screen w-64 fixed left-0 top-0 bg-blue-900 dark:bg-blue-950 flex flex-col h-full py-6 shadow-2xl z-50">
+        <div class="px-6 mb-10">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary"
+                        style="font-variation-settings: 'FILL' 1;">sports_soccer</span>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-black text-yellow-500 font-lexend leading-none">Vanguard FC</h2>
+                    <p class="text-blue-100/60 text-xs font-lexend tracking-widest uppercase">Elite Admin</p>
+                </div>
+            </div>
+        </div>
+        <nav class="flex-1 space-y-1">
+            <a class="flex items-center gap-3 text-blue-100/70 hover:text-white px-6 py-3 font-lexend font-medium hover:bg-blue-800/50 transition-all"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+            <a class="flex items-center gap-3 bg-blue-800 dark:bg-blue-900 text-yellow-500 rounded-lg mx-2 px-4 py-3 font-lexend font-medium shadow-sm transition-all"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="groups">groups</span>
+                Roster
+            </a>
+            <a class="flex items-center gap-3 text-blue-100/70 hover:text-white px-6 py-3 font-lexend font-medium hover:bg-blue-800/50 transition-all"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+                Training
+            </a>
+            <a class="flex items-center gap-3 text-blue-100/70 hover:text-white px-6 py-3 font-lexend font-medium hover:bg-blue-800/50 transition-all"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="sports_soccer">sports_soccer</span>
+                Matches
+            </a>
+            <a class="flex items-center gap-3 text-blue-100/70 hover:text-white px-6 py-3 font-lexend font-medium hover:bg-blue-800/50 transition-all"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="payments">payments</span>
+                Finances
+            </a>
+        </nav>
+        <div class="mt-auto px-4 space-y-4">
+            <button
+                class="w-full bg-secondary-container text-on-secondary-container font-lexend font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                <span class="material-symbols-outlined">person_add</span>
+                Add New Player
+            </button>
+            <div class="border-t border-blue-800 pt-4">
+                <a class="flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-2 text-sm font-lexend"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="help">help</span>
+                    Help
+                </a>
+                <a class="flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-2 text-sm font-lexend"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Logout
+                </a>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Canvas -->
+    <main class="ml-64 min-h-screen">
+        <!-- TopNavBar -->
+        <header
+            class="w-full sticky top-0 z-40 bg-white/80 dark:bg-blue-950/80 backdrop-blur-xl flex items-center justify-between px-8 h-16 w-full shadow-sm dark:shadow-none">
+            <div class="flex items-center gap-8">
+                <h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-50 font-lexend">Athletic
+                    Vanguard Admin</h1>
+                <nav class="hidden md:flex items-center gap-6 text-sm font-lexend">
+                    <a class="text-blue-800/60 dark:text-blue-200/60 hover:text-yellow-600 transition-colors duration-200"
+                        href="#">Overview</a>
+                    <a class="text-yellow-500 font-bold border-b-2 border-yellow-500" href="#">Players</a>
+                    <a class="text-blue-800/60 dark:text-blue-200/60 hover:text-yellow-600 transition-colors duration-200"
+                        href="#">Coaching Staff</a>
+                    <a class="text-blue-800/60 dark:text-blue-200/60 hover:text-yellow-600 transition-colors duration-200"
+                        href="#">Medical</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative hidden lg:block">
+                    <span
+                        class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-sm">search</span>
+                    <input
+                        class="bg-surface-container border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-secondary w-64 font-body"
+                        placeholder="Search roster..." type="text" />
+                </div>
+                <button class="p-2 text-blue-900 dark:text-blue-50 active:scale-95 transition-transform">
+                    <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+                </button>
+                <button class="p-2 text-blue-900 dark:text-blue-50 active:scale-95 transition-transform">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                </button>
+                <div class="w-8 h-8 rounded-full overflow-hidden border-2 border-secondary/20">
+                    <img alt="Admin Profile" class="w-full h-full object-cover"
+                        data-alt="professional portrait of a high-level sports administrator in a bright office environment"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzJUmV9JFsBwMO7FeL_cSrjtV2Uwx7KNdb60PocWT3Z_Q9uc6BFiMepYXdBQmKwkeurMGGxX1YBl5aJlvvpsXCn-mwXB3TDyZ8PlvqPfMLoDQReGjctCcqna488Rd3Ix3LzE44WCRPbU2tpKDmsLoUw_RSwQnj9SBaZZG9GYglN6NrenX_ZdAASxijeO9_adG3iJFFg6V46Tc31FZpAQtUNY4h5yaNKDJhe20v7U72gij25m46A4nZum5-CZgrU5EpTTWsLeKKbzDT" />
+                </div>
+            </div>
+        </header>
+        <!-- Content Area -->
+        <div class="p-8 space-y-8">
+            <!-- Page Header & Filters -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <span class="text-secondary font-lexend font-bold tracking-widest text-xs uppercase">Roster
+                        Management</span>
+                    <h2 class="text-4xl font-extrabold text-primary font-lexend tracking-tight mt-1">Player Roster</h2>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="bg-surface-container-low p-1 rounded-xl flex items-center gap-1">
+                        <button
+                            class="px-4 py-2 text-sm font-lexend font-bold text-primary bg-white shadow-sm rounded-lg">2024</button>
+                        <button
+                            class="px-4 py-2 text-sm font-lexend font-medium text-outline hover:text-primary transition-colors">2023</button>
+                        <button
+                            class="px-4 py-2 text-sm font-lexend font-medium text-outline hover:text-primary transition-colors">2022</button>
+                    </div>
+                    <button class="bg-primary text-on-primary p-2 rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined">filter_list</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Bento Tab Filters -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <button
+                    class="group p-6 rounded-2xl bg-primary text-white shadow-xl flex flex-col items-start gap-4 transition-all hover:translate-y-[-4px]">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-yellow-500">
+                        <span class="material-symbols-outlined text-3xl"
+                            style="font-variation-settings: 'FILL' 1;">child_care</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-white/60 text-xs font-lexend uppercase tracking-widest">Active Category</p>
+                        <h3 class="text-xl font-black font-lexend">Infantiles</h3>
+                    </div>
+                    <div class="w-full bg-white/20 h-1.5 rounded-full mt-2">
+                        <div class="bg-yellow-500 h-full w-full rounded-full"></div>
+                    </div>
+                </button>
+                <button
+                    class="group p-6 rounded-2xl bg-surface-container-low text-primary flex flex-col items-start gap-4 transition-all hover:bg-surface-container-high hover:translate-y-[-4px]">
+                    <div
+                        class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary/40 group-hover:text-primary">
+                        <span class="material-symbols-outlined text-3xl">emoji_events</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-outline text-xs font-lexend uppercase tracking-widest">Development</p>
+                        <h3 class="text-xl font-black font-lexend">Sub-12</h3>
+                    </div>
+                    <div class="w-full bg-primary/5 h-1.5 rounded-full mt-2">
+                        <div class="bg-primary/20 h-full w-[65%] rounded-full"></div>
+                    </div>
+                </button>
+                <button
+                    class="group p-6 rounded-2xl bg-surface-container-low text-primary flex flex-col items-start gap-4 transition-all hover:bg-surface-container-high hover:translate-y-[-4px]">
+                    <div
+                        class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary/40 group-hover:text-primary">
+                        <span class="material-symbols-outlined text-3xl">sprint</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-outline text-xs font-lexend uppercase tracking-widest">Elite Path</p>
+                        <h3 class="text-xl font-black font-lexend">Sub-14</h3>
+                    </div>
+                    <div class="w-full bg-primary/5 h-1.5 rounded-full mt-2">
+                        <div class="bg-primary/20 h-full w-[82%] rounded-full"></div>
+                    </div>
+                </button>
+                <button
+                    class="group p-6 rounded-2xl bg-surface-container-low text-primary flex flex-col items-start gap-4 transition-all hover:bg-surface-container-high hover:translate-y-[-4px]">
+                    <div
+                        class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary/40 group-hover:text-primary">
+                        <span class="material-symbols-outlined text-3xl">bolt</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-outline text-xs font-lexend uppercase tracking-widest">Performance</p>
+                        <h3 class="text-xl font-black font-lexend">Sub-17</h3>
+                    </div>
+                    <div class="w-full bg-primary/5 h-1.5 rounded-full mt-2">
+                        <div class="bg-primary/20 h-full w-[45%] rounded-full"></div>
+                    </div>
+                </button>
+            </div>
+            <!-- Player Table Surface -->
+            <div class="bg-surface-container-lowest rounded-3xl p-2 shadow-sm border border-outline-variant/10">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-surface-container-low rounded-2xl">
+                                <th
+                                    class="px-6 py-5 font-lexend font-bold text-primary text-sm uppercase tracking-wider first:rounded-l-2xl">
+                                    Player</th>
+                                <th
+                                    class="px-6 py-5 font-lexend font-bold text-primary text-sm uppercase tracking-wider">
+                                    Registration ID</th>
+                                <th
+                                    class="px-6 py-5 font-lexend font-bold text-primary text-sm uppercase tracking-wider">
+                                    Field Position</th>
+                                <th
+                                    class="px-6 py-5 font-lexend font-bold text-primary text-sm uppercase tracking-wider text-center">
+                                    Status</th>
+                                <th
+                                    class="px-6 py-5 font-lexend font-bold text-primary text-sm uppercase tracking-wider last:rounded-r-2xl text-right">
+                                    Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="font-body">
+                            <!-- Player 1 -->
+                            <tr
+                                class="border-b border-surface-container-low hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md">
+                                            <img alt="Player" class="w-full h-full object-cover"
+                                                data-alt="close-up portrait of a young female athlete with intense focus, studio lighting on a dark background"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL4J7m7W0R9E1U_aduldDkHeV0JduQOMyydz7W-7kqWtmgclnV-tROR-6h56FLTSsVfxG4pwcvo05JlPJer9-ko6FvVQWLtcHnVqU2PEfNEMEsuk8QzgOujn0k7TuZua3kZkCdg7_4Z7rcfxljuxJDzW4XxgmCQJldnb5rYMZ_vH7WHcQqPmPb8r8niOgpyOIQ1qcXXuCK6qKHmymhptF2Uz2lJbT5xBkZI72zowWYupTwk7L0XNMQ2IeZqeMKsG-kUmaJh_bx6sGs" />
+                                        </div>
+                                        <div>
+                                            <p class="font-lexend font-bold text-primary text-lg leading-none">Martina
+                                                Silva</p>
+                                            <p class="text-xs text-outline font-medium mt-1">Infantiles League</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-on-surface font-mono font-medium">#VF-2024-042</td>
+                                <td class="px-6 py-5">
+                                    <span
+                                        class="bg-secondary/10 text-secondary font-lexend font-bold text-xs px-3 py-1 rounded-full uppercase">Attacking
+                                        Mid</span>
+                                </td>
+                                <td class="px-6 py-5 text-center">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs font-bold font-lexend text-green-600 bg-green-50 px-3 py-1 rounded-full">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Active
+                                    </span>
+                                </td>
+                                <td class="px-6 py-5 text-right">
+                                    <div
+                                        class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">edit</span></button>
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">visibility</span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Player 2 -->
+                            <tr
+                                class="border-b border-surface-container-low hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md">
+                                            <img alt="Player" class="w-full h-full object-cover"
+                                                data-alt="young female soccer player smiling in outdoor stadium lighting, team uniform visible"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABbi6zXaS2vqnfmSWWQ-nyifk2n4LY0igAu0sH4TpghDfaWURFWNkDl5JerdZsgCLKVT4nRQ2vXuxFfikrAnx_uC9wNOeIaUiLxmv46ia732l43aZucr929nM2pxVUB-zAMQiwSo1PSitAkiybR1AauXmYYnPMZi5AxND2g3gqwfrdlrrde3ZKZ5GzBDbbaoyThDj1WV6ZF8wE5TI14PhLEQAtUz95xOPn7HVYWM0AY0_gYl-DGlXf8ujgc3CWcuHJbSKu1DhmdTLQ" />
+                                        </div>
+                                        <div>
+                                            <p class="font-lexend font-bold text-primary text-lg leading-none">Lucía
+                                                Morales</p>
+                                            <p class="text-xs text-outline font-medium mt-1">Infantiles League</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-on-surface font-mono font-medium">#VF-2024-015</td>
+                                <td class="px-6 py-5">
+                                    <span
+                                        class="bg-blue-100 text-blue-800 font-lexend font-bold text-xs px-3 py-1 rounded-full uppercase">Goalkeeper</span>
+                                </td>
+                                <td class="px-6 py-5 text-center">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs font-bold font-lexend text-green-600 bg-green-50 px-3 py-1 rounded-full">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Active
+                                    </span>
+                                </td>
+                                <td class="px-6 py-5 text-right">
+                                    <div
+                                        class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">edit</span></button>
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">visibility</span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Player 3 -->
+                            <tr
+                                class="border-b border-surface-container-low hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md grayscale">
+                                            <img alt="Player" class="w-full h-full object-cover"
+                                                data-alt="focused portrait of a teenage female athlete, dramatic shadows, professional athletic headshot"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQGm0A9766Jkg7VPHbE-0lyBS1DjKyuy5dxp9_rG2UnpjrqnuMc-kZKoKkq8O1jvLnF8gtjS0P81sLG2ZVWNSwlEtBaIb-CAEBqSBl1T9WxucKqKFCBgXF4mhNYhewBBStiml6OyrKBn3YRV-sK0exfH4k8Bexi-i_BqBbn-m0_yCmJK_9v9na_z6qPo1AwSSdBdc2jRpEPNYv3oFCfnxUlwHuAQT_d3LhWnYn6cmBjL9cYMMq2Zw5Z6-0fG01B0tknteRYx6swmn" />
+                                        </div>
+                                        <div>
+                                            <p class="font-lexend font-bold text-primary text-lg leading-none">Elena
+                                                Rojas</p>
+                                            <p class="text-xs text-outline font-medium mt-1">Infantiles League</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-on-surface font-mono font-medium">#VF-2024-108</td>
+                                <td class="px-6 py-5">
+                                    <span
+                                        class="bg-orange-100 text-orange-800 font-lexend font-bold text-xs px-3 py-1 rounded-full uppercase">Striker</span>
+                                </td>
+                                <td class="px-6 py-5 text-center">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs font-bold font-lexend text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span> Medical Hold
+                                    </span>
+                                </td>
+                                <td class="px-6 py-5 text-right">
+                                    <div
+                                        class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">edit</span></button>
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">visibility</span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Player 4 -->
+                            <tr
+                                class="border-b border-surface-container-low hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md">
+                                            <img alt="Player" class="w-full h-full object-cover"
+                                                data-alt="athletic youth football player looking at camera, sunny field background, high contrast"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsF6RG8c6xOmg_ucbO9406uoghe_qCdWuqANfCjuv_fO7XWr9M8B9VQKO4Nr3WF3RcQ2PT2ArYH3SW8PH866KZE6w38YaSMJQAAeuWD-9UFQ6QQNHue9ptEm-P05vGZedKiKyk7fWRaeD0A6nuEV2LGH-n_pUN_01DC3bzs8sdKB0pcFH48PAuZEU9b6VIB1CB5_cjPhsmpESUqlz5incDB0JtrEUznEf63miBM2Th0NbkbBPTMiiTjV6upSLBFeFsqTcQPkYwa6xB" />
+                                        </div>
+                                        <div>
+                                            <p class="font-lexend font-bold text-primary text-lg leading-none">Sofia
+                                                Valdes</p>
+                                            <p class="text-xs text-outline font-medium mt-1">Infantiles League</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-on-surface font-mono font-medium">#VF-2024-002</td>
+                                <td class="px-6 py-5">
+                                    <span
+                                        class="bg-purple-100 text-purple-800 font-lexend font-bold text-xs px-3 py-1 rounded-full uppercase">Center
+                                        Back</span>
+                                </td>
+                                <td class="px-6 py-5 text-center">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-xs font-bold font-lexend text-green-600 bg-green-50 px-3 py-1 rounded-full">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Active
+                                    </span>
+                                </td>
+                                <td class="px-6 py-5 text-right">
+                                    <div
+                                        class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">edit</span></button>
+                                        <button
+                                            class="p-2 hover:bg-primary-container/10 rounded-lg text-primary transition-colors"><span
+                                                class="material-symbols-outlined">visibility</span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Pagination Footer -->
+                <div class="px-6 py-4 bg-surface-container-low rounded-b-3xl flex items-center justify-between">
+                    <p class="text-sm font-lexend font-medium text-outline">Showing <span
+                            class="text-primary font-bold">12</span> of <span class="text-primary font-bold">48</span>
+                        players</p>
+                    <div class="flex items-center gap-2">
+                        <button class="p-2 rounded-lg hover:bg-white text-primary transition-all disabled:opacity-30"
+                            disabled="">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            class="w-8 h-8 rounded-lg bg-primary text-white text-sm font-bold font-lexend">1</button>
+                        <button
+                            class="w-8 h-8 rounded-lg hover:bg-white text-primary text-sm font-medium font-lexend">2</button>
+                        <button
+                            class="w-8 h-8 rounded-lg hover:bg-white text-primary text-sm font-medium font-lexend">3</button>
+                        <button class="p-2 rounded-lg hover:bg-white text-primary transition-all">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Dashboard Snapshot Widgets (Bento Section) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-8">
+                <div class="bg-primary-container p-6 rounded-3xl text-white overflow-hidden relative">
+                    <div class="relative z-10">
+                        <p class="font-lexend text-xs uppercase tracking-widest opacity-60">Team Efficiency</p>
+                        <h4 class="text-3xl font-black font-lexend mt-2">94%</h4>
+                        <div class="mt-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-green-400">trending_up</span>
+                            <span class="text-sm font-bold">+2.4% this month</span>
+                        </div>
+                    </div>
+                    <span
+                        class="material-symbols-outlined absolute -bottom-4 -right-4 text-white opacity-10 text-9xl">insights</span>
+                </div>
+                <div class="bg-secondary-container p-6 rounded-3xl text-on-secondary-container relative">
+                    <p class="font-lexend text-xs uppercase tracking-widest opacity-70">Roster Capacity</p>
+                    <h4 class="text-3xl font-black font-lexend mt-2">124 / 150</h4>
+                    <div class="mt-4 w-full bg-black/10 h-2 rounded-full">
+                        <div class="bg-primary h-full w-[82%] rounded-full"></div>
+                    </div>
+                    <p class="text-xs font-bold mt-2 font-lexend">Space for 26 new talents</p>
+                </div>
+                <div class="bg-surface-container-high p-6 rounded-3xl border border-outline-variant/10">
+                    <p class="font-lexend text-xs uppercase tracking-widest text-outline">Upcoming Event</p>
+                    <h4 class="text-xl font-bold text-primary font-lexend mt-2">Regional Cup Selection</h4>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden"><img
+                                    class="w-full h-full object-cover" data-alt="profile"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3yD7DZWgqaV3sUiN4o6tSSiorTBmPn-SOYFMC5d1ANYkLVednchhV7WCnlyflx3XzAX1Kz0DgP5yuSUZ_jSCvVkwTjvELrxX51Hqb7CT1FBTWsozuslZs44epB68_XY2qzlQVjOM0KiNuKqNOPq63BXHoeEIMItLhF0SKHeM0B7XIkZiutX4RVRpWJRhGOosxQ9sJY4TsJ08hUBQTP3FCp12AbkETL10jj79vBmn1ArlzEiD0JVfbUHVGoIf3ScQxtS35fPEza6Z0" />
+                            </div>
+                            <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden"><img
+                                    class="w-full h-full object-cover" data-alt="profile"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAchyN-1PhrgwtO5-CGxQArgWRXsvJ2CZf0J_uQvsP9ueLDG2CpBn71ueiBHTlzsw6bpMzjejVLhuAldnSLVvdP2H_BpNkYNSvAhoRMvLMouwYso-LP-CqBVrNVb3esvGtKDV_FtT-UgOJaeL2J4PsNpeuQa9h3CUzdeHFATpnESl64XI4jeVbpuyBqpKSeouvixs3HBjAgtvUhmHo0HDwgFol0zd2NiQVQYu9mPmaBJ06a2iVR-cL2HOB7X4ZwqI8LrjYlFgl0Go1c" />
+                            </div>
+                            <div
+                                class="w-8 h-8 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-[10px] font-bold">
+                                +4</div>
+                        </div>
+                        <span class="text-xs font-bold font-lexend text-primary">Board Review</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Contextual FAB - Restricted to Dashboard/Home (Used here for Player Management) -->
+    <button
+        class="fixed bottom-8 right-8 bg-secondary text-on-secondary w-16 h-16 rounded-2xl shadow-2xl flex items-center justify-center active:scale-90 transition-transform z-50 group">
+        <span
+            class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform duration-300">add</span>
+    </button>
+</body>
+
+</html>
