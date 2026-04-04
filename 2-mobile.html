@@ -132,25 +132,54 @@
                 <span class="text-xs font-bold font-headline text-primary">Temporada 2024</span>
             </div>
         </section>
-        <!-- Category Horizontal Tabs -->
-        <nav class="flex gap-2 overflow-x-auto pb-4 mb-4 -mx-4 px-4 no-scrollbar">
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-sm shadow-sm">
-                Infantiles
-            </button>
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
-                Sub-12
-            </button>
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
-                Sub-14
-            </button>
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
-                Sub-17
-            </button>
-        </nav>
+        <!-- Athlete Filter Bento Card -->
+        <section class="mb-8">
+            <div class="bg-surface-container-low p-6 rounded-3xl border border-outline-variant/10 shadow-sm flex flex-col gap-6">
+                <div>
+                    <h3 class="font-headline font-bold text-primary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary">filter_list</span>
+                        Filtrar Atletas
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest px-1">Categoría</label>
+                            <select class="w-full bg-white border-none rounded-2xl py-3 px-4 text-sm font-headline focus:ring-2 focus:ring-secondary text-primary shadow-sm appearance-none cursor-pointer">
+                                <option>Todas las Categorías</option>
+                                <option>Infantiles</option>
+                                <option>Sub-12</option>
+                                <option>Sub-14</option>
+                                <option>Sub-17</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest px-1">Posición</label>
+                            <select class="w-full bg-white border-none rounded-2xl py-3 px-4 text-sm font-headline focus:ring-2 focus:ring-secondary text-primary shadow-sm appearance-none cursor-pointer">
+                                <option>Todas las Posiciones</option>
+                                <option>Portera</option>
+                                <option>Defensora Central</option>
+                                <option>Lateral</option>
+                                <option>Mediocampista</option>
+                                <option>Enganche</option>
+                                <option>Delantera</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest px-1">Estado</label>
+                            <select class="w-full bg-white border-none rounded-2xl py-3 px-4 text-sm font-headline focus:ring-2 focus:ring-secondary text-primary shadow-sm appearance-none cursor-pointer">
+                                <option>Todos los Estados</option>
+                                <option>Activa</option>
+                                <option>Baja Médica</option>
+                                <option>Inactiva</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full py-4 bg-primary text-white font-headline font-bold rounded-2xl hover:bg-primary/90 transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-xl">filter_alt</span>
+                    Aplicar Filtros
+                </button>
+            </div>
+        </section>
         <!-- Player List (Bento-style list) -->
         <div class="space-y-4">
             <!-- Player Card 1 -->

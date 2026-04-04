@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Athletic Vanguard | Admin Portal</title>
+    <title>Admin Payment Portal | The Athletic Vanguard</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -88,399 +88,220 @@
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
         }
 
-        .no-line {
-            border: none !important;
+        body {
+            font-family: 'Manrope', sans-serif;
         }
 
-        .tonal-shifts {
-            background: linear-gradient(180deg, rgba(0, 17, 58, 1) 0%, rgba(0, 23, 74, 1) 100%);
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Lexend', sans-serif;
         }
 
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(0.5);
-            cursor: pointer;
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
         }
     </style>
 </head>
 
-<body class="bg-background text-on-background font-body">
-    <!-- SideNavBar (JSON Component) -->
-    <aside
-        class="fixed left-0 top-0 h-screen w-64 bg-blue-950 dark:bg-slate-950 shadow-2xl flex flex-col h-full py-8 z-50">
-        <div class="px-6 mb-10">
-            <h1 class="text-2xl font-black text-white italic font-headline">The Vanguard</h1>
-            <p class="text-amber-400 text-xs font-headline tracking-widest uppercase mt-1">Admin Portal</p>
-        </div>
-        <nav class="flex-1">
-            <div
-                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
-                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-                <span>Dashboard</span>
-            </div>
-            <div
-                class="bg-blue-900 text-amber-400 rounded-r-full mr-4 py-3 px-6 mb-2 flex items-center gap-3 font-label">
-                <span class="material-symbols-outlined" data-icon="payments">payments</span>
-                <span>Payments</span>
-            </div>
-            <div
-                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
-                <span class="material-symbols-outlined" data-icon="group">group</span>
-                <span>Members</span>
-            </div>
-            <div
-                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
-                <span class="material-symbols-outlined" data-icon="sports_handball">sports_handball</span>
-                <span>Teams</span>
-            </div>
-            <div
-                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
-                <span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
-                <span>Analytics</span>
-            </div>
-        </nav>
-        <div class="px-6 mb-6">
+<body class="bg-background text-on-background min-h-screen pb-24">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-blue-950/80 backdrop-blur-md shadow-sm dark:shadow-none h-16 flex justify-between items-center px-6">
+        <div class="flex items-center gap-4">
             <button
-                class="w-full py-3 bg-secondary-container text-on-secondary-container rounded-xl font-bold text-sm shadow-lg active:scale-95 transition-transform">
-                New Transaction
+                class="text-blue-900 dark:text-blue-100 hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors p-2 rounded-full active:scale-95 duration-200">
+                <span class="material-symbols-outlined">menu</span>
             </button>
+            <h1 class="text-xl font-bold text-blue-900 dark:text-blue-50 uppercase font-['Lexend'] tracking-tight">
+                Recaudación</h1>
         </div>
-        <footer class="border-t border-white/10 pt-4">
-            <div
-                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 text-sm font-label">
-                <span class="material-symbols-outlined" data-icon="help">help</span>
-                <span>Help Center</span>
+        <button
+            class="text-blue-900 dark:text-blue-100 hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors p-2 rounded-full active:scale-95 duration-200">
+            <span class="material-symbols-outlined">filter_list</span>
+        </button>
+    </header>
+    <main class="pt-20 px-4 space-y-6">
+        <!-- Total Summary Card - Athletic Vanguard Style -->
+        <section
+            class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-container p-6 text-on-primary shadow-lg">
+            <div class="absolute top-[-20%] right-[-10%] opacity-10">
+                <span class="material-symbols-outlined text-[160px]"
+                    style="font-variation-settings: 'FILL' 1;">payments</span>
             </div>
-            <div
-                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 text-sm font-label">
-                <span class="material-symbols-outlined" data-icon="logout">logout</span>
-                <span>Logout</span>
-            </div>
-        </footer>
-    </aside>
-    <!-- Main Content Area -->
-    <main class="ml-64 min-h-screen">
-        <!-- TopAppBar (JSON Component) -->
-        <header
-            class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-blue-900/10 shadow-sm flex justify-between items-center h-16 px-6 ml-0">
-            <div class="flex items-center gap-4">
-                <h2 class="text-xl font-bold tracking-tighter text-blue-950 uppercase font-headline">Athletic Vanguard
-                </h2>
-                <div class="h-6 w-px bg-blue-900/20"></div>
-                <span class="text-slate-500 font-headline font-medium">Recaudación y Pagos</span>
-            </div>
-            <div class="flex items-center gap-4 pr-72"> <!-- Adjusted padding for the offset side nav space -->
-                <div class="relative">
-                    <span
-                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-                    <input
-                        class="pl-10 pr-4 py-1.5 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-secondary text-sm w-64"
-                        placeholder="Buscar transacción..." type="text" />
-                </div>
-                <div class="flex gap-2">
-                    <span
-                        class="material-symbols-outlined p-2 text-slate-500 cursor-pointer hover:bg-surface-container-high rounded-full transition-colors"
-                        data-icon="notifications">notifications</span>
-                    <span
-                        class="material-symbols-outlined p-2 text-slate-500 cursor-pointer hover:bg-surface-container-high rounded-full transition-colors"
-                        data-icon="settings">settings</span>
-                </div>
-                <div class="w-8 h-8 rounded-full overflow-hidden border-2 border-secondary-container">
-                    <img alt="Administrator Profile"
-                        data-alt="professional female administrator portrait with a focused and confident expression in a modern office environment"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFNWZjd5pTGZl9LROa8dAduWMJYtrWpP61Xwr8MKAk3xifSMod8wl6z-swqBSNdkxXu6GSym6zAaYuj1TIVgFtBQOlahEiQOtozawsiRZ0__anSLnO3GdPO96dKj_lqb5mOknIViyBGi21GH7NkWEh3JAWom2MNeOqo-TGJkwr5YzxJjbOVafv0jw9IN8TpZx6mNbR7k43FzVGEHHUf_ymydPA6XKUZxfZlHaoCj14RRLhqlfmtGZmkqo2r_FbLgOdYNjssb0ackwq" />
+            <div class="relative z-10">
+                <p class="text-on-primary/70 font-headline text-xs uppercase tracking-widest mb-1">Total Collected</p>
+                <h2 class="text-4xl font-extrabold font-headline tracking-tighter mb-4">$142,500.00</h2>
+                <div class="flex items-center gap-2 text-secondary-container">
+                    <span class="material-symbols-outlined text-sm">trending_up</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">12% vs last month</span>
                 </div>
             </div>
-        </header>
-        <section class="pt-24 px-8 pb-12 max-w-7xl mx-auto">
-            <!-- Hero Stats & Filters Bento Layout -->
-            <div class="grid grid-cols-12 gap-6 mb-10">
-                <!-- Main Total Card -->
+        </section>
+        <!-- Date Range Selectors -->
+        <section class="grid grid-cols-2 gap-4">
+            <div class="space-y-1">
+                <label class="text-[10px] font-bold text-outline uppercase tracking-widest px-1">Desde</label>
                 <div
-                    class="col-span-12 md:col-span-8 relative overflow-hidden rounded-xl bg-primary p-8 text-white shadow-xl">
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full -mr-20 -mt-20 opacity-50 blur-3xl">
-                    </div>
-                    <div class="relative z-10">
-                        <p class="text-amber-400 font-headline font-bold tracking-widest uppercase text-sm mb-2">Resumen
-                            General</p>
-                        <h1 class="text-4xl md:text-5xl font-headline font-black mb-6 italic">Total Recaudado</h1>
-                        <div class="flex items-baseline gap-4">
-                            <span class="text-5xl md:text-7xl font-headline font-black text-white">$1.248.500</span>
-                            <span class="text-secondary-fixed text-lg font-bold flex items-center gap-1">
-                                <span class="material-symbols-outlined">trending_up</span> +12.4%
-                            </span>
+                    class="relative bg-surface-container-highest rounded-xl px-4 py-3 flex items-center gap-2 group border-b-2 border-transparent focus-within:border-secondary transition-all">
+                    <span class="material-symbols-outlined text-primary text-sm">calendar_today</span>
+                    <input class="bg-transparent border-none p-0 text-sm font-semibold focus:ring-0 w-full" readonly=""
+                        type="text" value="01/10/2023" />
+                </div>
+            </div>
+            <div class="space-y-1">
+                <label class="text-[10px] font-bold text-outline uppercase tracking-widest px-1">Hasta</label>
+                <div
+                    class="relative bg-surface-container-highest rounded-xl px-4 py-3 flex items-center gap-2 group border-b-2 border-transparent focus-within:border-secondary transition-all">
+                    <span class="material-symbols-outlined text-primary text-sm">calendar_month</span>
+                    <input class="bg-transparent border-none p-0 text-sm font-semibold focus:ring-0 w-full" readonly=""
+                        type="text" value="31/10/2023" />
+                </div>
+            </div>
+        </section>
+        <!-- Transactions List -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-end px-1">
+                <h3 class="font-headline font-bold text-primary tracking-tight">Recent Payments</h3>
+                <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">October 2023</span>
+            </div>
+            <div class="space-y-2">
+                <!-- Transaction Item 1 -->
+                <div
+                    class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-secondary transition-transform active:scale-[0.98]">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border-2 border-white">
+                            <img class="w-full h-full object-cover"
+                                data-alt="portrait of a young athletic boy with short dark hair in a sports jersey, clean professional studio lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQZnJvaOoSTXbdYu5k_J1jP5Nuv_gepiKvxcE5QiJCe4o8ue-uASw1fsSJ7pZuGukDdimgMGZhuuaB46vQhXtyj9TAivCjpMhfRp0qS2O97idhNmTX3_D2ug_e2TOgGi1JWON6YQMDGbB8MaYtn9xuKILoVdN_URd-qvY_9vpWzLJMO3kCL0-rdM4q5GOqp1G1-dZwvO7E_jIUU29b--XEY0dpKGWmT_FKYGlAFyO3lfOb5nN7FgaJS_3f7kn5qoKoETWOogCmaT-L" />
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary text-sm">Mateo Gonzalez</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-12 • Membership</p>
                         </div>
                     </div>
+                    <div class="text-right">
+                        <p class="font-headline font-extrabold text-primary">$12,400</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
+                    </div>
                 </div>
-                <!-- Date Range Filter Bento Card -->
+                <!-- Transaction Item 2 -->
                 <div
-                    class="col-span-12 md:col-span-4 bg-surface-container-low p-6 rounded-xl border-outline-variant/15 border flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-headline font-bold text-blue-950 mb-4">Filtrar por Período</h3>
-                        <div class="space-y-4">
-                            <div class="flex flex-col gap-1">
-                                <label class="text-xs font-bold text-slate-500 uppercase px-1">Fecha Desde</label>
-                                <input
-                                    class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-0 focus:border-b-2 focus:border-secondary transition-all font-medium py-3"
-                                    type="date" />
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <label class="text-xs font-bold text-slate-500 uppercase px-1">Fecha Hasta</label>
-                                <input
-                                    class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-0 focus:border-b-2 focus:border-secondary transition-all font-medium py-3"
-                                    type="date" />
-                            </div>
+                    class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-secondary transition-transform active:scale-[0.98]">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border-2 border-white">
+                            <img class="w-full h-full object-cover"
+                                data-alt="portrait of a young teenage girl soccer player with determined expression, athletic lighting and soft background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL1PQwyl3X6y2jRmgdZSISLtHmf5xAQWEOZNLf0DC-kI5xjBPHEFyQYZqwH4jbu2L8TbLj5f7Bur3rfkMVjt8lZvSrmEJL27XuWx0ShTZl8Ecx71VEgve2d-OYTW0ucDbhuAse791tpBseRQ5TVMmHQiMx5PK8QY7GJ--41wwk_Itouf14PHPWv1F_R9d30cM6AYfr7EFzxxEAwnoVneYbr7haKCHkc-6InNc0k9ZgcL3ITY6CbTbnTHZMNuNQK9mIlPhh0fLTF6q2" />
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary text-sm">Valentina Perez</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-15 • Tournament Fee</p>
                         </div>
                     </div>
-                    <button
-                        class="mt-4 w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-container transition-colors">
-                        Aplicar Filtros
-                    </button>
-                </div>
-            </div>
-            <!-- Transaction Table Container -->
-            <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
-                <div class="p-6 flex justify-between items-center bg-white border-b border-surface-container-high">
-                    <h3 class="font-headline font-bold text-xl text-blue-950">Historial de Transacciones</h3>
-                    <div class="flex gap-2">
-                        <button
-                            class="px-4 py-2 text-sm font-bold text-primary border border-primary/20 rounded-lg hover:bg-surface-container-low transition-colors flex items-center gap-2">
-                            <span class="material-symbols-outlined text-lg">download</span> Exportar
-                        </button>
-                        <button
-                            class="px-4 py-2 text-sm font-bold text-white bg-primary rounded-lg hover:bg-primary-container transition-colors flex items-center gap-2">
-                            <span class="material-symbols-outlined text-lg">add</span> Nuevo Pago
-                        </button>
+                    <div class="text-right">
+                        <p class="font-headline font-extrabold text-primary">$8,500</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
                     </div>
                 </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr class="bg-surface-container-low">
-                                <th
-                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
-                                    Fecha</th>
-                                <th
-                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
-                                    Jugadora</th>
-                                <th
-                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
-                                    Categoría</th>
-                                <th
-                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
-                                    Concepto</th>
-                                <th
-                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
-                                    Método</th>
-                                <th
-                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline text-right">
-                                    Monto</th>
-                                <th class="px-6 py-4"></th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-surface-container-low">
-                            <!-- Row 1 -->
-                            <tr class="hover:bg-surface-container-lowest transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-bold text-blue-900">12 Oct 2023</div>
-                                    <div class="text-xs text-slate-400">14:30 hs</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-xs font-bold">
-                                            EM</div>
-                                        <span class="text-sm font-bold text-blue-950">Elena Martínez</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span
-                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">U19
-                                        Elite</span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-medium text-slate-700">Cuota Octubre</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-2 text-slate-600">
-                                        <span class="material-symbols-outlined text-lg">credit_card</span>
-                                        <span class="text-xs font-medium">Tarjeta</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right">
-                                    <span class="text-sm font-black text-blue-950">$45.000</span>
-                                </td>
-                                <td class="px-6 py-4 text-right">
-                                    <button class="text-slate-400 hover:text-primary transition-colors">
-                                        <span class="material-symbols-outlined">more_vert</span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <!-- Row 2 -->
-                            <tr class="hover:bg-surface-container-lowest transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-bold text-blue-900">11 Oct 2023</div>
-                                    <div class="text-xs text-slate-400">09:15 hs</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary text-xs font-bold">
-                                            SR</div>
-                                        <span class="text-sm font-bold text-blue-950">Sofía Rodríguez</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span
-                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">Primera</span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-medium text-slate-700">Inscripción Torneo</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-2 text-slate-600">
-                                        <span class="material-symbols-outlined text-lg">account_balance</span>
-                                        <span class="text-xs font-medium">Transferencia</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right">
-                                    <span class="text-sm font-black text-blue-950">$12.500</span>
-                                </td>
-                                <td class="px-6 py-4 text-right">
-                                    <button class="text-slate-400 hover:text-primary transition-colors">
-                                        <span class="material-symbols-outlined">more_vert</span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <!-- Row 3 -->
-                            <tr class="hover:bg-surface-container-lowest transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-bold text-blue-900">10 Oct 2023</div>
-                                    <div class="text-xs text-slate-400">18:45 hs</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary text-xs font-bold">
-                                            LB</div>
-                                        <span class="text-sm font-bold text-blue-950">Lucía Blanco</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span
-                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">U15</span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-medium text-slate-700">Kit Indumentaria</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-2 text-slate-600">
-                                        <span class="material-symbols-outlined text-lg">payments</span>
-                                        <span class="text-xs font-medium">Efectivo</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right">
-                                    <span class="text-sm font-black text-blue-950">$38.000</span>
-                                </td>
-                                <td class="px-6 py-4 text-right">
-                                    <button class="text-slate-400 hover:text-primary transition-colors">
-                                        <span class="material-symbols-outlined">more_vert</span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <!-- Row 4 -->
-                            <tr class="hover:bg-surface-container-lowest transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-bold text-blue-900">09 Oct 2023</div>
-                                    <div class="text-xs text-slate-400">10:00 hs</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-xs font-bold">
-                                            AV</div>
-                                        <span class="text-sm font-bold text-blue-950">Ana Valdés</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span
-                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">U19
-                                        Elite</span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-medium text-slate-700">Cuota Octubre</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center gap-2 text-slate-600">
-                                        <span class="material-symbols-outlined text-lg">credit_card</span>
-                                        <span class="text-xs font-medium">Tarjeta</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right">
-                                    <span class="text-sm font-black text-blue-950">$45.000</span>
-                                </td>
-                                <td class="px-6 py-4 text-right">
-                                    <button class="text-slate-400 hover:text-primary transition-colors">
-                                        <span class="material-symbols-outlined">more_vert</span>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="p-6 bg-surface-container-low flex justify-between items-center">
-                    <span class="text-xs font-bold text-slate-500">Mostrando 4 de 128 transacciones</span>
-                    <div class="flex gap-1">
-                        <button
-                            class="p-2 rounded-md hover:bg-surface-container-highest transition-colors text-slate-400">
-                            <span class="material-symbols-outlined">chevron_left</span>
-                        </button>
-                        <button class="px-3 py-1 rounded-md bg-primary text-white text-xs font-bold">1</button>
-                        <button
-                            class="px-3 py-1 rounded-md hover:bg-surface-container-highest text-slate-600 text-xs font-bold transition-colors">2</button>
-                        <button
-                            class="px-3 py-1 rounded-md hover:bg-surface-container-highest text-slate-600 text-xs font-bold transition-colors">3</button>
-                        <button
-                            class="p-2 rounded-md hover:bg-surface-container-highest transition-colors text-slate-400">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Asymmetric Secondary Insight Section -->
-            <div class="mt-10 flex flex-col md:flex-row gap-6">
+                <!-- Transaction Item 3 -->
                 <div
-                    class="flex-1 bg-white p-8 rounded-xl relative overflow-hidden border border-outline-variant/10 shadow-sm">
-                    <div class="relative z-10">
-                        <h4 class="font-headline font-black text-2xl text-blue-950 italic mb-4">Próximos Vencimientos
-                        </h4>
-                        <p class="text-slate-500 mb-6 text-sm">Hay 12 jugadoras con cuotas que vencen en las próximas 48
-                            horas. Se recomienda enviar recordatorios automáticos.</p>
-                        <button
-                            class="px-6 py-3 bg-secondary text-on-secondary font-bold rounded-lg shadow-md hover:opacity-90 transition-opacity">
-                            Enviar Recordatorios
-                        </button>
+                    class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-secondary transition-transform active:scale-[0.98]">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border-2 border-white">
+                            <img class="w-full h-full object-cover"
+                                data-alt="headshot of a smiling young boy athlete in a blue soccer kit, outdoor daylight with grass in background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNEoqrSfUkgLXuhdYC9QWxodyrxKriGs1FFVHMCpia7QSyh8kKLfQRUHva2bu-_B3U-CDnd68jFLbtnw8rVY0Tv8ebrvj_4xxqf9Pk-OQAbU_KEjn1JQpQS0RFLz0ocSO8qGoxw-NmA9OQEKQCZBgST528q3eYyT8FCz_PCpn0p7tUmmA68LT3e1ONhApGAU2Gq4Dv0YymPRXEb0QBlp-zRt02y25qCjzoNtZ-P-rNPlGEYvI2uGlKRQbtc5Z9ApOdnHof016UmOJs" />
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary text-sm">Lucas Silva</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-10 • Membership</p>
+                        </div>
                     </div>
-                    <span
-                        class="material-symbols-outlined absolute -bottom-6 -right-6 text-9xl text-secondary opacity-10 rotate-12"
-                        style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+                    <div class="text-right">
+                        <p class="font-headline font-extrabold text-primary">$12,400</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
+                    </div>
                 </div>
-                <div class="md:w-1/3 bg-primary-container p-8 rounded-xl text-white">
-                    <h4 class="font-headline font-bold text-lg mb-2">Meta Mensual</h4>
-                    <div class="flex justify-between items-end mb-4">
-                        <span class="text-3xl font-black italic">$1.5M</span>
-                        <span class="text-xs font-bold text-amber-400">83% Completado</span>
+                <!-- Transaction Item 4 -->
+                <div
+                    class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-secondary transition-transform active:scale-[0.98]">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border-2 border-white">
+                            <img class="w-full h-full object-cover"
+                                data-alt="portrait of a young female athlete with braided hair, wearing a white training jersey, clean studio background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7gGs_Ojn0MgD0GZNmV-0djAXwFynY8JmhBuBo4vLclbHfQ9qDPuFgpfo9-pup0AHCoz7B2ynsMieL0UhWD_smqx5TknfAftkrgcVQLIFnGGI9enfMdbOltMrV0ztV1K8FlgfQVBglr0zM7ttQJ_nyf_IoRorfQwZrZ5kayxRoR-sRe7gmIDqtoWyfyHA9-scQTVSDCAWT6aiPxbN4VibNYFD5ijlWQQ7tjhK9EASc7a9HDE8GhcdYPsItoRoJmhLTz61wM5EvJjzp" />
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary text-sm">Sofia Ramirez</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-17 • Equipment</p>
+                        </div>
                     </div>
-                    <div class="w-full bg-blue-900/50 h-3 rounded-full overflow-hidden">
-                        <div class="bg-amber-400 h-full w-[83%] shadow-[0_0_12px_rgba(251,191,36,0.5)]"></div>
+                    <div class="text-right">
+                        <p class="font-headline font-extrabold text-primary">$15,200</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Stats Visualization (Bento-style detail) -->
+        <section class="grid grid-cols-2 gap-4 pt-4">
+            <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-[10px] font-bold text-outline uppercase mb-2">Players Paid</p>
+                <div class="flex items-baseline gap-1">
+                    <span class="text-2xl font-headline font-extrabold text-primary">84</span>
+                    <span class="text-xs font-bold text-primary/60">/ 120</span>
+                </div>
+                <div class="w-full bg-surface-container-highest h-1 rounded-full mt-3">
+                    <div class="bg-secondary h-full rounded-full w-[70%]"></div>
+                </div>
+            </div>
+            <div class="bg-surface-container-low p-4 rounded-xl">
+                <p class="text-[10px] font-bold text-outline uppercase mb-2">Pending</p>
+                <div class="flex items-baseline gap-1">
+                    <span class="text-2xl font-headline font-extrabold text-error">$42.1k</span>
+                </div>
+                <p class="text-[9px] font-bold text-error uppercase mt-3">Requires Action</p>
+            </div>
+        </section>
     </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white/90 dark:bg-blue-950/90 backdrop-blur-xl z-50 border-t border-blue-900/10 dark:border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-xl">
+        <div
+            class="flex flex-col items-center justify-center text-blue-400 dark:text-blue-500 hover:text-blue-900 dark:hover:text-white transition-all active:scale-90 duration-200">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Overview</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 rounded-xl px-3 py-1.5 active:scale-90 duration-200">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Payments</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-blue-400 dark:text-blue-500 hover:text-blue-900 dark:hover:text-white transition-all active:scale-90 duration-200">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Invoices</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-blue-400 dark:text-blue-500 hover:text-blue-900 dark:hover:text-white transition-all active:scale-90 duration-200">
+            <span class="material-symbols-outlined">settings</span>
+            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Settings</span>
+        </div>
+    </nav>
 </body>
 
 </html>
