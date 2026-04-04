@@ -1,0 +1,1 @@
+Consignas del ejercicio 5 de la guía 1 de actividades
