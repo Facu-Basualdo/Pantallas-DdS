@@ -5,69 +5,70 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <title>Athletic Vanguard | Admin Portal</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "surface-container-highest": "#e1e3e4",
-                        "tertiary-fixed-dim": "#b6c4ff",
-                        "on-surface": "#191c1d",
-                        "inverse-on-surface": "#f0f1f2",
-                        "on-tertiary-fixed-variant": "#003ab1",
-                        "secondary-fixed": "#ffe088",
-                        "on-secondary-container": "#745c00",
-                        "surface-bright": "#f8f9fa",
-                        "surface": "#f8f9fa",
-                        "inverse-primary": "#b3c5ff",
-                        "tertiary-fixed": "#dce1ff",
-                        "on-secondary-fixed": "#241a00",
-                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
                         "tertiary": "#000f3f",
-                        "surface-container-high": "#e7e8e9",
-                        "on-tertiary": "#ffffff",
-                        "surface-container": "#edeeef",
+                        "surface-container-low": "#f3f4f5",
+                        "tertiary-container": "#00216d",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-tint": "#435b9f",
+                        "on-primary": "#ffffff",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed": "#dce1ff",
                         "secondary-fixed-dim": "#e9c349",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffe088",
+                        "on-surface-variant": "#444650",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-surface": "#191c1d",
+                        "secondary": "#735c00",
                         "on-primary-container": "#758dd5",
                         "outline": "#757682",
+                        "on-tertiary-fixed-variant": "#003ab1",
+                        "outline-variant": "#c5c6d2",
                         "surface-dim": "#d9dadb",
                         "inverse-surface": "#2e3132",
-                        "primary-fixed": "#dbe1ff",
-                        "surface-tint": "#435b9f",
-                        "primary-fixed-dim": "#b3c5ff",
-                        "surface-container-low": "#f3f4f5",
                         "on-tertiary-container": "#6588ff",
-                        "on-secondary-fixed-variant": "#574500",
-                        "outline-variant": "#c5c6d2",
-                        "on-error": "#ffffff",
-                        "secondary-container": "#fed65b",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary": "#ffffff",
-                        "surface-variant": "#e1e3e4",
-                        "on-surface-variant": "#444650",
-                        "on-primary-fixed": "#00174a",
-                        "secondary": "#735c00",
+                        "on-secondary-fixed": "#241a00",
+                        "primary-fixed": "#dbe1ff",
+                        "primary": "#00113a",
                         "on-primary-fixed-variant": "#2a4386",
                         "on-tertiary-fixed": "#00164f",
-                        "error-container": "#ffdad6",
-                        "on-background": "#191c1d",
-                        "primary": "#00113a",
+                        "inverse-primary": "#b3c5ff",
                         "error": "#ba1a1a",
+                        "background": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#745c00",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#00174a",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "surface-container": "#edeeef",
+                        "surface-bright": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-container": "#fed65b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "on-secondary-fixed-variant": "#574500",
                         "primary-container": "#002366",
-                        "on-primary": "#ffffff",
-                        "tertiary-container": "#00216d",
-                        "background": "#f8f9fa"
+                        "on-error": "#ffffff"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -87,207 +88,399 @@
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
         }
 
-        .glass-header {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+        .no-line {
+            border: none !important;
         }
 
-        ::-webkit-scrollbar {
-            display: none;
+        .tonal-shifts {
+            background: linear-gradient(180deg, rgba(0, 17, 58, 1) 0%, rgba(0, 23, 74, 1) 100%);
         }
-    </style>
-    <style>
-        body {
-            min-height: max(884px, 100dvh);
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.5);
+            cursor: pointer;
         }
     </style>
 </head>
 
-<body class="bg-background text-on-background font-body min-h-screen pb-24">
-    <!-- TopAppBar -->
-    <header
-        class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
-        <div class="flex items-center gap-4">
-            <span class="material-symbols-outlined text-blue-900" data-icon="menu">menu</span>
-            <h1 class="text-xl font-bold tracking-tighter text-blue-900 font-headline">Vanguardia Atlética</h1>
+<body class="bg-background text-on-background font-body">
+    <!-- SideNavBar (JSON Component) -->
+    <aside
+        class="fixed left-0 top-0 h-screen w-64 bg-blue-950 dark:bg-slate-950 shadow-2xl flex flex-col h-full py-8 z-50">
+        <div class="px-6 mb-10">
+            <h1 class="text-2xl font-black text-white italic font-headline">The Vanguard</h1>
+            <p class="text-amber-400 text-xs font-headline tracking-widest uppercase mt-1">Admin Portal</p>
         </div>
-        <div class="h-8 w-8 rounded-full bg-primary-container overflow-hidden">
-            <img alt="Admin Profile" class="h-full w-full object-cover"
-                data-alt="Close-up portrait of a professional woman with a confident expression in a brightly lit modern office setting"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTCTqSAiEt6bx3O2misChUo6UbjBJSSoAW8-KSTu2xVOPrV9J19akz5q94NfnzcdknKJXE2iPv8Wt4sAnHpxizBTpVqlyG8wbE-Z0HNfMN9EQZUZIvTcABqRsXcuf1zqvcqfGg38g5eNYdurYAJ9xSqzlNIW-XonnCstiNdJAXqdxYv7UhGy-24DmXbBNjhmvC8uAG3opbeXikBdyrhEWeyzRxiyOHbBZlxhFiWwsidoogl_G8YhF6ImLskCWI7bFmZoETU3ioJKG6" />
-        </div>
-    </header>
-    <main class="pt-20 px-4">
-        <!-- Dashboard Sub-Header & Period Filter -->
-        <section class="mb-6 flex justify-between items-end">
-            <div>
-                <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Portal de la Academia</p>
-                <h2 class="text-3xl font-headline font-extrabold text-primary tracking-tight">Atletas</h2>
+        <nav class="flex-1">
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                <span>Dashboard</span>
             </div>
-            <div class="bg-surface-container-high px-3 py-2 rounded-xl flex items-center gap-2">
-                <span class="material-symbols-outlined text-sm text-primary"
-                    data-icon="calendar_today">calendar_today</span>
-                <span class="text-xs font-bold font-headline text-primary">Temporada 2024</span>
+            <div
+                class="bg-blue-900 text-amber-400 rounded-r-full mr-4 py-3 px-6 mb-2 flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined" data-icon="payments">payments</span>
+                <span>Payments</span>
+            </div>
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined" data-icon="group">group</span>
+                <span>Members</span>
+            </div>
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined" data-icon="sports_handball">sports_handball</span>
+                <span>Teams</span>
+            </div>
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+                <span>Analytics</span>
+            </div>
+        </nav>
+        <div class="px-6 mb-6">
+            <button
+                class="w-full py-3 bg-secondary-container text-on-secondary-container rounded-xl font-bold text-sm shadow-lg active:scale-95 transition-transform">
+                New Transaction
+            </button>
+        </div>
+        <footer class="border-t border-white/10 pt-4">
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 text-sm font-label">
+                <span class="material-symbols-outlined" data-icon="help">help</span>
+                <span>Help Center</span>
+            </div>
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 text-sm font-label">
+                <span class="material-symbols-outlined" data-icon="logout">logout</span>
+                <span>Logout</span>
+            </div>
+        </footer>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="ml-64 min-h-screen">
+        <!-- TopAppBar (JSON Component) -->
+        <header
+            class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-blue-900/10 shadow-sm flex justify-between items-center h-16 px-6 ml-0">
+            <div class="flex items-center gap-4">
+                <h2 class="text-xl font-bold tracking-tighter text-blue-950 uppercase font-headline">Athletic Vanguard
+                </h2>
+                <div class="h-6 w-px bg-blue-900/20"></div>
+                <span class="text-slate-500 font-headline font-medium">Recaudación y Pagos</span>
+            </div>
+            <div class="flex items-center gap-4 pr-72"> <!-- Adjusted padding for the offset side nav space -->
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                    <input
+                        class="pl-10 pr-4 py-1.5 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-secondary text-sm w-64"
+                        placeholder="Buscar transacción..." type="text" />
+                </div>
+                <div class="flex gap-2">
+                    <span
+                        class="material-symbols-outlined p-2 text-slate-500 cursor-pointer hover:bg-surface-container-high rounded-full transition-colors"
+                        data-icon="notifications">notifications</span>
+                    <span
+                        class="material-symbols-outlined p-2 text-slate-500 cursor-pointer hover:bg-surface-container-high rounded-full transition-colors"
+                        data-icon="settings">settings</span>
+                </div>
+                <div class="w-8 h-8 rounded-full overflow-hidden border-2 border-secondary-container">
+                    <img alt="Administrator Profile"
+                        data-alt="professional female administrator portrait with a focused and confident expression in a modern office environment"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFNWZjd5pTGZl9LROa8dAduWMJYtrWpP61Xwr8MKAk3xifSMod8wl6z-swqBSNdkxXu6GSym6zAaYuj1TIVgFtBQOlahEiQOtozawsiRZ0__anSLnO3GdPO96dKj_lqb5mOknIViyBGi21GH7NkWEh3JAWom2MNeOqo-TGJkwr5YzxJjbOVafv0jw9IN8TpZx6mNbR7k43FzVGEHHUf_ymydPA6XKUZxfZlHaoCj14RRLhqlfmtGZmkqo2r_FbLgOdYNjssb0ackwq" />
+                </div>
+            </div>
+        </header>
+        <section class="pt-24 px-8 pb-12 max-w-7xl mx-auto">
+            <!-- Hero Stats & Filters Bento Layout -->
+            <div class="grid grid-cols-12 gap-6 mb-10">
+                <!-- Main Total Card -->
+                <div
+                    class="col-span-12 md:col-span-8 relative overflow-hidden rounded-xl bg-primary p-8 text-white shadow-xl">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full -mr-20 -mt-20 opacity-50 blur-3xl">
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-amber-400 font-headline font-bold tracking-widest uppercase text-sm mb-2">Resumen
+                            General</p>
+                        <h1 class="text-4xl md:text-5xl font-headline font-black mb-6 italic">Total Recaudado</h1>
+                        <div class="flex items-baseline gap-4">
+                            <span class="text-5xl md:text-7xl font-headline font-black text-white">$1.248.500</span>
+                            <span class="text-secondary-fixed text-lg font-bold flex items-center gap-1">
+                                <span class="material-symbols-outlined">trending_up</span> +12.4%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Date Range Filter Bento Card -->
+                <div
+                    class="col-span-12 md:col-span-4 bg-surface-container-low p-6 rounded-xl border-outline-variant/15 border flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-headline font-bold text-blue-950 mb-4">Filtrar por Período</h3>
+                        <div class="space-y-4">
+                            <div class="flex flex-col gap-1">
+                                <label class="text-xs font-bold text-slate-500 uppercase px-1">Fecha Desde</label>
+                                <input
+                                    class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-0 focus:border-b-2 focus:border-secondary transition-all font-medium py-3"
+                                    type="date" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <label class="text-xs font-bold text-slate-500 uppercase px-1">Fecha Hasta</label>
+                                <input
+                                    class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-0 focus:border-b-2 focus:border-secondary transition-all font-medium py-3"
+                                    type="date" />
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="mt-4 w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-container transition-colors">
+                        Aplicar Filtros
+                    </button>
+                </div>
+            </div>
+            <!-- Transaction Table Container -->
+            <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6 flex justify-between items-center bg-white border-b border-surface-container-high">
+                    <h3 class="font-headline font-bold text-xl text-blue-950">Historial de Transacciones</h3>
+                    <div class="flex gap-2">
+                        <button
+                            class="px-4 py-2 text-sm font-bold text-primary border border-primary/20 rounded-lg hover:bg-surface-container-low transition-colors flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">download</span> Exportar
+                        </button>
+                        <button
+                            class="px-4 py-2 text-sm font-bold text-white bg-primary rounded-lg hover:bg-primary-container transition-colors flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">add</span> Nuevo Pago
+                        </button>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-surface-container-low">
+                                <th
+                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
+                                    Fecha</th>
+                                <th
+                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
+                                    Jugadora</th>
+                                <th
+                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
+                                    Categoría</th>
+                                <th
+                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
+                                    Concepto</th>
+                                <th
+                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline">
+                                    Método</th>
+                                <th
+                                    class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider font-headline text-right">
+                                    Monto</th>
+                                <th class="px-6 py-4"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-surface-container-low">
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-bold text-blue-900">12 Oct 2023</div>
+                                    <div class="text-xs text-slate-400">14:30 hs</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-xs font-bold">
+                                            EM</div>
+                                        <span class="text-sm font-bold text-blue-950">Elena Martínez</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">U19
+                                        Elite</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-slate-700">Cuota Octubre</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-2 text-slate-600">
+                                        <span class="material-symbols-outlined text-lg">credit_card</span>
+                                        <span class="text-xs font-medium">Tarjeta</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right">
+                                    <span class="text-sm font-black text-blue-950">$45.000</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-bold text-blue-900">11 Oct 2023</div>
+                                    <div class="text-xs text-slate-400">09:15 hs</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary text-xs font-bold">
+                                            SR</div>
+                                        <span class="text-sm font-bold text-blue-950">Sofía Rodríguez</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">Primera</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-slate-700">Inscripción Torneo</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-2 text-slate-600">
+                                        <span class="material-symbols-outlined text-lg">account_balance</span>
+                                        <span class="text-xs font-medium">Transferencia</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right">
+                                    <span class="text-sm font-black text-blue-950">$12.500</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-bold text-blue-900">10 Oct 2023</div>
+                                    <div class="text-xs text-slate-400">18:45 hs</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary text-xs font-bold">
+                                            LB</div>
+                                        <span class="text-sm font-bold text-blue-950">Lucía Blanco</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">U15</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-slate-700">Kit Indumentaria</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-2 text-slate-600">
+                                        <span class="material-symbols-outlined text-lg">payments</span>
+                                        <span class="text-xs font-medium">Efectivo</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right">
+                                    <span class="text-sm font-black text-blue-950">$38.000</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-bold text-blue-900">09 Oct 2023</div>
+                                    <div class="text-xs text-slate-400">10:00 hs</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-xs font-bold">
+                                            AV</div>
+                                        <span class="text-sm font-bold text-blue-950">Ana Valdés</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-3 py-1 bg-surface-container-high text-blue-900 text-[10px] font-black uppercase rounded-full">U19
+                                        Elite</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-slate-700">Cuota Octubre</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center gap-2 text-slate-600">
+                                        <span class="material-symbols-outlined text-lg">credit_card</span>
+                                        <span class="text-xs font-medium">Tarjeta</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right">
+                                    <span class="text-sm font-black text-blue-950">$45.000</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-6 bg-surface-container-low flex justify-between items-center">
+                    <span class="text-xs font-bold text-slate-500">Mostrando 4 de 128 transacciones</span>
+                    <div class="flex gap-1">
+                        <button
+                            class="p-2 rounded-md hover:bg-surface-container-highest transition-colors text-slate-400">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="px-3 py-1 rounded-md bg-primary text-white text-xs font-bold">1</button>
+                        <button
+                            class="px-3 py-1 rounded-md hover:bg-surface-container-highest text-slate-600 text-xs font-bold transition-colors">2</button>
+                        <button
+                            class="px-3 py-1 rounded-md hover:bg-surface-container-highest text-slate-600 text-xs font-bold transition-colors">3</button>
+                        <button
+                            class="p-2 rounded-md hover:bg-surface-container-highest transition-colors text-slate-400">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Asymmetric Secondary Insight Section -->
+            <div class="mt-10 flex flex-col md:flex-row gap-6">
+                <div
+                    class="flex-1 bg-white p-8 rounded-xl relative overflow-hidden border border-outline-variant/10 shadow-sm">
+                    <div class="relative z-10">
+                        <h4 class="font-headline font-black text-2xl text-blue-950 italic mb-4">Próximos Vencimientos
+                        </h4>
+                        <p class="text-slate-500 mb-6 text-sm">Hay 12 jugadoras con cuotas que vencen en las próximas 48
+                            horas. Se recomienda enviar recordatorios automáticos.</p>
+                        <button
+                            class="px-6 py-3 bg-secondary text-on-secondary font-bold rounded-lg shadow-md hover:opacity-90 transition-opacity">
+                            Enviar Recordatorios
+                        </button>
+                    </div>
+                    <span
+                        class="material-symbols-outlined absolute -bottom-6 -right-6 text-9xl text-secondary opacity-10 rotate-12"
+                        style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+                </div>
+                <div class="md:w-1/3 bg-primary-container p-8 rounded-xl text-white">
+                    <h4 class="font-headline font-bold text-lg mb-2">Meta Mensual</h4>
+                    <div class="flex justify-between items-end mb-4">
+                        <span class="text-3xl font-black italic">$1.5M</span>
+                        <span class="text-xs font-bold text-amber-400">83% Completado</span>
+                    </div>
+                    <div class="w-full bg-blue-900/50 h-3 rounded-full overflow-hidden">
+                        <div class="bg-amber-400 h-full w-[83%] shadow-[0_0_12px_rgba(251,191,36,0.5)]"></div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- Category Horizontal Tabs -->
-        <nav class="flex gap-2 overflow-x-auto pb-4 mb-4 -mx-4 px-4 no-scrollbar">
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-secondary-container text-on-secondary-container font-headline font-bold text-sm shadow-sm">
-                Infantiles
-            </button>
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
-                Sub-12
-            </button>
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
-                Sub-14
-            </button>
-            <button
-                class="flex-shrink-0 px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-headline font-medium text-sm hover:bg-surface-container-high transition-colors">
-                Sub-17
-            </button>
-        </nav>
-        <!-- Player List (Bento-style list) -->
-        <div class="space-y-4">
-            <!-- Player Card 1 -->
-            <div
-                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
-                <div class="relative">
-                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
-                        data-alt="Action portrait of a young female soccer player smiling with hair tied back, natural lighting, soft outdoor background"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkO_9lL8Lg8_oLMBscfjkWh7l6Ot0L61chVrdnom8NMpHP_5ErFqlC7_zUAvO0a4ubJop9ePTDkm88_xl68BjQFDuc6OCgbmBXa_riCYhO-VnY28y2S7DvnvBSXhwDFRCG4NQXsopRIxjy-iIt2Gv4qQPaui0JM49_D7tvp6JTy3oWiyOQdWVWoV-5gNUoRYfIHVkNn7EeOveff-6o5e8Q_sVaSZiMm_m9k1uuGYUaolzeOB_vnrQGXIUedPwFJAbcieg8ZHOeLm3r" />
-                    <div
-                        class="absolute -bottom-1 -right-1 bg-secondary w-5 h-5 rounded-full flex items-center justify-center">
-                        <span class="material-symbols-outlined text-[12px] text-white" data-icon="star"
-                            data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
-                    </div>
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Sofia Rodriguez</h3>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Activa •
-                            Titular</span>
-                    </div>
-                </div>
-                <button
-                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
-                </button>
-            </div>
-            <!-- Player Card 2 -->
-            <div
-                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
-                <div class="relative">
-                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-transparent"
-                        data-alt="Close-up of a young girl with athletic wear, determined expression, bright stadium lighting background"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK46M_VvhqpKHmLpa4HAeOsuA1jFKNSMGKesmdw9MbaFqbxccUy7Zxhc4xVJeBMh3CHCI4gXRDwVXvwxirrbs1SFsRnPtms70aCRUdxMC2sdINJyvOCci0FRCMftgZB6YmWO678mN62tRsa7MKca_03cdCrweQUrFcSwL-ArxFi9MPDFJVra43CEXCctJnYrI_RDuNeqPpDCm8RED9ElZdw6VP1cTpPKzBq2XMrwap_2JQMmoLeN_V5nKJ_hYq3VNP5wdktFEhnOp5" />
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Elena Martinez</h3>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Activa •
-                            Suplente</span>
-                    </div>
-                </div>
-                <button
-                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary transition-colors">
-                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
-                </button>
-            </div>
-            <!-- Player Card 3 -->
-            <div
-                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
-                <div class="relative">
-                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-transparent"
-                        data-alt="Professional profile of a young female athlete in a navy jersey, soft lighting, clean studio background"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4rPNZJ5_a_peBKpN7nXKVsvXFOU1XtQFn1BcoPKLyGhCE6L5loyaGYbDmPoDbHZLAWutum5HC0CgaN7J24UJI8gmqMNEl3vDC_Mx7z4jx4J5sVNoC6JdkfSOvsJHuzNlve07EY5CHXyHH-sxVqCusPJDFE-LWbpnAZHhU2Jv3EC4hCP1_TJBT6iOxxyhxY0hwA42iAMOYi7QuNIfuyxfpxdvarXmMHgAhxTg_DZCznG_wcAzLG8GQGEzl0hWA1E0hRmZWA6d4Uhji" />
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Lucia Gomez</h3>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Lesionada •
-                            Kinesiología</span>
-                    </div>
-                </div>
-                <button
-                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary transition-colors">
-                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
-                </button>
-            </div>
-            <!-- Player Card 4 -->
-            <div
-                class="bg-surface-container-lowest p-4 rounded-full flex items-center gap-4 group transition-all duration-300 active:scale-[0.98]">
-                <div class="relative">
-                    <img alt="Player Photo" class="w-14 h-14 rounded-full object-cover border-2 border-transparent"
-                        data-alt="Young athlete with high ponytail, focused look, outdoor athletics track background with warm sunset glow"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBSf3C141veTE7PLzlga0P72KF8Hp3HRpBeyaufb1EYQhGn-glNKV4Vc69PNtemQH8Cq_LwfAMyu-iOTRpS3-clVGCqzzQu3yeZjcaY-CJT0eErtxgj68wJBkFfR4fXmMzXVB_i_6haP3HeS-Ct8Jh72isGX0y3sY_u7Az0Bw_juKc4VPaECtd9jUNphgcVtmiGxFi44ZIEmD1D3M6NHfyP5MM4dhOGPvl2TSxNjE940D_UzDFIbrq7PCglb3N_31ivN5OAdHZj3RI" />
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-headline font-bold text-primary text-lg leading-tight">Valentina Silva</h3>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        <span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Activa •
-                            Promesa</span>
-                    </div>
-                </div>
-                <button
-                    class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary transition-colors">
-                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
-                </button>
-            </div>
-            <!-- Stat Summary Floating Card -->
-            <div class="bg-primary p-6 rounded-full mt-8 shadow-xl">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-secondary font-headline text-2xl font-black">24</p>
-                        <p class="text-white/70 text-[10px] font-label uppercase tracking-widest">Total de Atletas</p>
-                    </div>
-                    <div class="h-10 w-[1px] bg-white/10"></div>
-                    <div>
-                        <p class="text-white font-headline text-2xl font-black">18</p>
-                        <p class="text-white/70 text-[10px] font-label uppercase tracking-widest">En Entrenamiento</p>
-                    </div>
-                    <div class="h-10 w-[1px] bg-white/10"></div>
-                    <div>
-                        <p class="text-secondary font-headline text-2xl font-black">92%</p>
-                        <p class="text-white/70 text-[10px] font-label uppercase tracking-widest">Asistencia</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
-    <!-- BottomNavBar -->
-    <nav
-        class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-2 bg-blue-900/90 backdrop-blur-2xl rounded-t-3xl z-50 shadow-[0_-8px_32px_rgba(0,0,0,0.1)]">
-        <a class="flex flex-col items-center justify-center text-slate-300 px-4 py-2 hover:bg-white/5 transition-colors active:scale-90 duration-200"
-            href="#">
-            <span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
-            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Tablero</span>
-        </a>
-        <a class="flex flex-col items-center justify-center bg-amber-400/10 text-amber-400 rounded-xl px-4 py-2 active:scale-90 duration-200"
-            href="#">
-            <span class="material-symbols-outlined mb-1" data-icon="groups" data-weight="fill"
-                style="font-variation-settings: 'FILL' 1;">groups</span>
-            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Atletas</span>
-        </a>
-        <a class="flex flex-col items-center justify-center text-slate-300 px-4 py-2 hover:bg-white/5 transition-colors active:scale-90 duration-200"
-            href="#">
-            <span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
-            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Eventos</span>
-        </a>
-        <a class="flex flex-col items-center justify-center text-slate-300 px-4 py-2 hover:bg-white/5 transition-colors active:scale-90 duration-200"
-            href="#">
-            <span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
-            <span class="font-lexend text-[10px] font-medium uppercase tracking-widest">Configuración</span>
-        </a>
-    </nav>
 </body>
 
 </html>

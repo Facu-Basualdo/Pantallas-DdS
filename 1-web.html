@@ -1,83 +1,81 @@
 <!DOCTYPE html>
 
-<html class="light" lang="es">
+<html class="light" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <title>Member Portal | Las Leonas del Sur</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "secondary-fixed": "#ffe088",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-variant": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed": "#dce1ff",
+                        "secondary-container": "#fed65b",
+                        "surface-bright": "#f8f9fa",
+                        "surface": "#f8f9fa",
                         "on-surface-variant": "#444650",
-                        "on-tertiary-fixed-variant": "#003ab1",
-                        "on-error": "#ffffff",
                         "error-container": "#ffdad6",
-                        "surface-container-highest": "#e1e3e4",
+                        "secondary-fixed": "#ffe088",
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#435b9f",
+                        "on-primary-container": "#758dd5",
+                        "secondary": "#735c00",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-container": "#6588ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b3c5ff",
+                        "on-secondary-container": "#745c00",
+                        "primary": "#00113a",
+                        "tertiary-fixed-dim": "#b6c4ff",
+                        "surface-container": "#edeeef",
                         "surface-dim": "#d9dadb",
                         "tertiary": "#000f3f",
-                        "outline-variant": "#c5c6d2",
-                        "surface-tint": "#435b9f",
-                        "secondary": "#735c00",
-                        "surface-container-low": "#f3f4f5",
-                        "inverse-surface": "#2e3132",
-                        "tertiary-fixed-dim": "#b6c4ff",
-                        "on-secondary-container": "#745c00",
-                        "inverse-primary": "#b3c5ff",
-                        "secondary-container": "#fed65b",
-                        "surface-container-high": "#e7e8e9",
-                        "surface-bright": "#f8f9fa",
-                        "on-secondary-fixed-variant": "#574500",
-                        "on-primary-fixed-variant": "#2a4386",
-                        "primary-container": "#002366",
-                        "on-secondary-fixed": "#241a00",
-                        "tertiary-fixed": "#dce1ff",
-                        "on-tertiary-container": "#6588ff",
-                        "outline": "#757682",
-                        "surface-variant": "#e1e3e4",
-                        "on-primary-fixed": "#00174a",
-                        "on-tertiary-fixed": "#00164f",
-                        "surface-container": "#edeeef",
-                        "on-tertiary": "#ffffff",
-                        "primary": "#00113a",
-                        "surface-container-lowest": "#ffffff",
-                        "on-background": "#191c1d",
                         "error": "#ba1a1a",
                         "secondary-fixed-dim": "#e9c349",
-                        "surface": "#f8f9fa",
+                        "outline": "#757682",
+                        "on-tertiary-fixed": "#00164f",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#2a4386",
+                        "surface-container-high": "#e7e8e9",
+                        "primary-container": "#002366",
                         "on-surface": "#191c1d",
-                        "on-secondary": "#ffffff",
-                        "on-primary": "#ffffff",
-                        "background": "#f8f9fa",
-                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed": "#00174a",
+                        "on-tertiary-fixed-variant": "#003ab1",
+                        "tertiary-container": "#00216d",
                         "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#574500",
                         "inverse-on-surface": "#f0f1f2",
-                        "primary-fixed-dim": "#b3c5ff",
-                        "on-primary-container": "#758dd5",
-                        "tertiary-container": "#00216d"
+                        "outline-variant": "#c5c6d2"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
                     },
                     "fontFamily": {
                         "headline": ["Lexend"],
-                        "body": ["Manrope"],
+                        "body": ["Lexend"],
                         "label": ["Lexend"]
                     }
                 },
@@ -89,358 +87,279 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
 
-        .glass-header {
-            backdrop-filter: blur(20px);
-        }
-
-        body {
-            font-family: 'Manrope', sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        h1,
-        h2,
-        h3,
-        .font-headline {
-            font-family: 'Lexend', sans-serif;
+        .tonal-shift {
+            transition: background-color 0.3s ease;
         }
     </style>
 </head>
 
-<body class="text-on-surface">
-    <!-- SideNavBar Implementation -->
-    <aside class="fixed left-0 top-0 flex flex-col h-full z-40 bg-blue-950 dark:bg-slate-950 h-screen w-64 border-r-0"
-        id="sidebar">
-        <div class="px-6 py-8">
-            <h1 class="text-xl font-bold tracking-tighter text-amber-400 dark:text-amber-300">Las Leonas Admin</h1>
-            <p class="text-xs text-blue-200/50 uppercase tracking-widest mt-1 font-semibold">Panel Vanguard</p>
+<body class="bg-surface font-body text-on-surface flex min-h-screen">
+    <!-- SideNavBar -->
+    <nav
+        class="h-full w-64 fixed left-0 top-0 bg-white border-r border-outline-variant/30 flex flex-col py-8 gap-4 z-40">
+        <div class="px-8 mb-8">
+            <h1 class="text-primary font-black font-headline text-xl tracking-tighter">LAS LEONAS</h1>
+            <p class="font-label uppercase text-[10px] tracking-[0.2em] text-outline mt-1">Member Portal</p>
         </div>
-        <nav class="flex-1 px-4 space-y-2">
-            <!-- Active: Players List -->
-            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-amber-400 font-bold border-r-4 border-amber-400 bg-blue-900/30 transition-colors duration-200"
+        <div class="flex-1 flex flex-col gap-1 px-4">
+            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
                 href="#">
-                <span class="material-symbols-outlined" data-icon="groups">groups</span>
-                <span class="font-label">Lista de Jugadoras</span>
+                <span class="material-symbols-outlined text-xl">dashboard</span>
+                Dashboard
             </a>
-            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-blue-200/70 hover:text-white hover:bg-blue-900/50 transition-colors duration-200"
+            <a class="flex items-center gap-4 py-3 px-4 bg-primary text-white font-bold font-label uppercase text-[10px] tracking-widest"
                 href="#">
-                <span class="material-symbols-outlined" data-icon="payments">payments</span>
-                <span class="font-label">Resumen de Pagos</span>
+                <span class="material-symbols-outlined text-xl">payments</span>
+                Payments
             </a>
-            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-blue-200/70 hover:text-white hover:bg-blue-900/50 transition-colors duration-200"
+            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
                 href="#">
-                <span class="material-symbols-outlined" data-icon="category">category</span>
-                <span class="font-label">Categorías</span>
+                <span class="material-symbols-outlined text-xl">query_stats</span>
+                Team Stats
             </a>
-            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-blue-200/70 hover:text-white hover:bg-blue-900/50 transition-colors duration-200"
+            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
                 href="#">
-                <span class="material-symbols-outlined" data-icon="settings">settings</span>
-                <span class="font-label">Configuración</span>
+                <span class="material-symbols-outlined text-xl">calendar_today</span>
+                Schedule
             </a>
-        </nav>
-        <div class="p-4 mt-auto">
+            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
+                href="#">
+                <span class="material-symbols-outlined text-xl">person</span>
+                Profile
+            </a>
+        </div>
+        <div class="mt-auto px-4 flex flex-col gap-1 border-t border-outline-variant/20 pt-6">
             <button
-                class="w-full py-4 bg-secondary-container text-on-secondary-container font-bold rounded-xl flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-amber-900/20">
-                <span class="material-symbols-outlined" data-icon="add">add</span>
-                Agregar Nueva Jugadora
+                class="w-full bg-primary text-white py-4 font-headline font-bold text-xs tracking-[0.1em] uppercase hover:bg-primary-container transition-colors">
+                Register Payment
             </button>
-            <div class="mt-6 flex items-center gap-3 px-4 py-3 bg-blue-900/20 rounded-xl">
-                <img class="w-10 h-10 rounded-full object-cover"
-                    data-alt="professional female sports administrator portrait in a clean modern office setting"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdjBTLZmq2ToWTWnryoW5HCrdCXhdu7_i5bxYV4DNPSO0fqqvqOeaN0EpmcrfHo9UTcDDaME1NbBm8PQhXkOf80sWYWb_seMFF4gqmMiv5UKZ1sZ7tyfUMuj_lv9JWK8AbCdlh6_qbeR4XqCcmhsuzim76QxkPCe9MeBSBN-lEyNFGPieWyGFkHFBi255WwclwmaCC6FJ1LmYXLgLcAYY9B8bZSRbiRLgaj6eZ5VUKOdRAy5Tz1J3ZJnEodxf2fdxAk_4L5VtruDjm" />
-                <div class="overflow-hidden">
-                    <p class="text-sm font-bold text-white truncate">Usuario Administrador</p>
-                    <p class="text-xs text-blue-200/60 truncate">Director del Club</p>
-                </div>
-            </div>
+            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:text-primary font-label uppercase text-[10px] tracking-widest mt-4"
+                href="#">
+                <span class="material-symbols-outlined text-xl">help</span>
+                Support
+            </a>
+            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:text-primary font-label uppercase text-[10px] tracking-widest"
+                href="#">
+                <span class="material-symbols-outlined text-xl">logout</span>
+                Logout
+            </a>
         </div>
-    </aside>
-    <!-- Main Content Canvas -->
-    <main class="ml-64 min-h-screen">
-        <!-- TopNavBar Implementation -->
-        <header
-            class="sticky top-0 w-full flex justify-between items-center px-8 py-4 z-30 bg-white/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-            <div class="flex items-center gap-4">
-                <h2 class="text-2xl font-black text-blue-950 dark:text-white tracking-tight">Las Leonas del Sur</h2>
-            </div>
-            <div class="flex items-center gap-6">
-                <div class="relative group">
+    </nav>
+    <!-- Main Canvas -->
+    <main class="flex-1 ml-64 p-12">
+        <!-- Header Section -->
+        <header class="flex justify-between items-start mb-12">
+            <div>
+                <h2 class="font-headline font-black text-4xl text-primary tracking-tight mb-2 uppercase">Member Portal
+                </h2>
+                <div class="flex items-center gap-3 text-outline font-medium">
                     <span
-                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-amber-500 transition-colors"
-                        data-icon="search">search</span>
-                    <input
-                        class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full w-64 focus:ring-2 focus:ring-amber-400 text-sm"
-                        placeholder="Buscar jugadora..." type="text" />
+                        class="bg-primary/5 text-primary border border-primary/10 px-3 py-1 text-[10px] font-black font-label uppercase tracking-widest">Active
+                        Season 2024</span>
+                    <span class="text-xs uppercase tracking-wider">Welcome back, champ!</span>
                 </div>
-                <div class="flex items-center gap-4">
-                    <button class="p-2 text-blue-900/60 hover:text-amber-500 transition-all">
-                        <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-                    </button>
-                    <button class="p-2 text-blue-900/60 hover:text-amber-500 transition-all">
-                        <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-                    </button>
+            </div>
+            <div class="flex items-center gap-4 bg-surface-container-low p-2 border border-outline-variant/30 pr-6">
+                <div class="w-12 h-12 bg-primary-container">
+                    <img class="w-full h-full object-cover"
+                        data-alt="close-up portrait of a determined female athlete with dark hair in a ponytail and a warm smile"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXt3--b7hoXY8Bfe6nyFz5xmco-04AgldT2UYEobryzKQgosGuvjaAVTvQR99aTojdWOjk6g2DSLWmmpq7ic08umPDOgX0GoNrfBCa7QFoouvXRA2V-ZkPXy4LlfZolDS5DB0pJh-fwodh6VxCMGJcldH_9K2PHXa12c-WfqY1X8MUY8xKozJclT3y0f8w-BEoJISQuy7TMGlBw5mdZwPRyfenK-bKXUyx_t0UztdLHhzCYFolJkljrfZ_jFd3OGs1H0xIC3UDgLYY" />
+                </div>
+                <div>
+                    <p class="font-headline font-black text-xs text-primary uppercase tracking-tight">Elena Lioness</p>
+                    <p class="text-[9px] font-label uppercase tracking-widest text-outline">#LDS-2024</p>
                 </div>
             </div>
         </header>
-        <!-- Content Area -->
-        <div class="p-8 max-w-7xl mx-auto">
-            <!-- Page Header with Filter -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-                <div>
-                    <h3 class="text-4xl font-extrabold text-primary tracking-tighter leading-none mb-2">Listado de
-                        Jugadoras</h3>
-                    <div class="flex items-center gap-2 text-on-surface-variant font-medium">
-                        <span class="material-symbols-outlined text-amber-500 text-sm"
-                            data-icon="calendar_today">calendar_today</span>
-                        <span>Periodo Lectivo: 2024</span>
+        <!-- Content Layout -->
+        <div class="grid grid-cols-12 gap-8">
+            <!-- Player Details Hero Card -->
+            <div class="col-span-12 relative overflow-hidden bg-primary p-12 min-h-[360px] flex flex-col justify-end">
+                <div class="absolute top-0 right-0 w-3/5 h-full">
+                    <div class="absolute inset-0 bg-gradient-to-l from-transparent via-primary/60 to-primary z-10">
                     </div>
+                    <img class="w-full h-full object-cover grayscale opacity-30"
+                        data-alt="professional female field hockey player mid-stride on a bright blue turf with motion blur energy"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpjpHjXfUY_eMljpDeWCRbEsfhTYyg7aDX_iJi3ge_p-qN1hg_Q3v3h0v3w91pdphaxnez2zy203hiwvK6hHacpw1uEs6VkQO6ctOXPqndIBLx75xLj0pdrecNqPRnoyfa6xu_BZl4PstYFmh97ZcZaolbFVbQPlIAH7JHZZ9mR41woIHXJUJP13FYA_zBv4xR98Z8LqbE5UHjyPuDhC05RTxkaFjRM-_pPmKunKXJu9lF7gdPQ7JT37uZ8CNS29vADsCEHuXrJeol" />
                 </div>
-                <div class="flex items-center gap-3 bg-white p-1 rounded-xl shadow-sm">
-                    <button
-                        class="px-4 py-2 bg-primary text-white rounded-lg font-bold text-sm shadow-md">Todas</button>
-                    <button
-                        class="px-4 py-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg font-bold text-sm transition-colors">Federadas</button>
-                    <button
-                        class="px-4 py-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg font-bold text-sm transition-colors">Becadas</button>
+                <div class="relative z-20">
+                    <h3
+                        class="font-headline text-6xl font-black text-white leading-none tracking-tighter mb-8 uppercase">
+                        ELENA<br />LIONESS
+                    </h3>
+                    <div class="flex flex-wrap gap-12 items-center">
+                        <div>
+                            <p class="text-[10px] font-label uppercase tracking-[0.2em] text-primary-fixed-dim/60 mb-2">
+                                Membership ID</p>
+                            <p class="font-headline text-xl font-black text-white">#LDS-2024</p>
+                        </div>
+                        <div class="h-10 w-[1px] bg-white/10 hidden md:block"></div>
+                        <div>
+                            <p class="text-[10px] font-label uppercase tracking-[0.2em] text-primary-fixed-dim/60 mb-2">
+                                Discipline</p>
+                            <p class="font-headline text-xl font-black text-white">Field Hockey</p>
+                        </div>
+                        <div class="h-10 w-[1px] bg-white/10 hidden md:block"></div>
+                        <div>
+                            <p class="text-[10px] font-label uppercase tracking-[0.2em] text-primary-fixed-dim/60 mb-2">
+                                Position</p>
+                            <p class="font-headline text-xl font-black text-white">Forward / Striker</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Bento-style Grid for Categories -->
-            <div class="space-y-12">
-                <!-- Category Section: Primera -->
-                <section>
-                    <div class="flex items-center justify-between mb-6 border-l-4 border-amber-400 pl-4">
-                        <h4 class="text-xl font-bold text-primary tracking-tight">Primera División</h4>
-                        <span
-                            class="px-3 py-1 bg-primary-container text-on-primary-container text-xs font-black rounded-full uppercase tracking-wider">                            Rendimiento de Élite</span>
+            <!-- Payment Gateway Section -->
+            <div class="col-span-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Payment Form -->
+                <section class="bg-white border border-outline-variant/30 p-10">
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="w-10 h-10 bg-primary flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-xl">account_balance_wallet</span>
+                        </div>
+                        <h3 class="font-headline font-black text-xl text-primary tracking-tight uppercase">Membership
+                            Fees</h3>
                     </div>
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-outline-variant/10">
-                        <table class="w-full text-left border-collapse">
-                            <thead
-                                class="bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-widest">
-                                <tr>
-                                    <th class="px-6 py-4">Jugadora</th>
-                                    <th class="px-6 py-4">ID Socio</th>
-                                    <th class="px-6 py-4">Posición</th>
-                                    <th class="px-6 py-4">Estado</th>
-                                    <th class="px-6 py-4 text-right">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-surface-container-high">
-                                <tr class="hover:bg-surface-container-lowest transition-colors group">
-                                    <td class="px-6 py-4">
-                                        <div class="flex items-center gap-3">
-                                            <div
-                                                class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-black text-sm">
-                                                MC</div>
-                                            <div>
-                                                <p class="font-bold text-primary">Martina Cavallo</p>
-                                                <p class="text-xs text-on-surface-variant">martina.c@leonas.com</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 font-mono text-sm text-on-surface-variant">#2024-00124</td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="text-xs font-bold px-2 py-1 bg-surface-container-high rounded text-primary">Delantera</span>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <div class="flex items-center gap-2">
-                                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                            <span class="text-sm font-semibold text-emerald-700">Activa</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <button
-                                            class="p-2 hover:bg-amber-50 rounded-lg text-outline hover:text-amber-600 transition-all">
-                                            <span class="material-symbols-outlined"
-                                                data-icon="more_vert">more_vert</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-surface-container-lowest transition-colors group">
-                                    <td class="px-6 py-4">
-                                        <div class="flex items-center gap-3">
-                                            <div
-                                                class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-black text-sm">
-                                                LR</div>
-                                            <div>
-                                                <p class="font-bold text-primary">Lucía Rodríguez</p>
-                                                <p class="text-xs text-on-surface-variant">lucia.rod@leonas.com</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 font-mono text-sm text-on-surface-variant">#2024-00156</td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="text-xs font-bold px-2 py-1 bg-surface-container-high rounded text-primary">Portera</span>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <div class="flex items-center gap-2">
-                                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                            <span class="text-sm font-semibold text-emerald-700">Activa</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <button
-                                            class="p-2 hover:bg-amber-50 rounded-lg text-outline hover:text-amber-600 transition-all">
-                                            <span class="material-symbols-outlined"
-                                                data-icon="more_vert">more_vert</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="space-y-10">
+                        <!-- Month Selection -->
+                        <div class="space-y-3">
+                            <label
+                                class="font-label text-[10px] uppercase tracking-[0.2em] text-outline block font-black">Select
+                                Billing Month</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full bg-surface-container-highest border-none py-4 px-6 appearance-none font-headline font-bold text-primary focus:ring-1 focus:ring-primary uppercase text-xs">
+                                    <option>April 2024</option>
+                                    <option>May 2024 (Current)</option>
+                                    <option>June 2024</option>
+                                </select>
+                                <span
+                                    class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-outline">expand_more</span>
+                            </div>
+                        </div>
+                        <!-- Amount Display -->
+                        <div class="bg-surface-container-low p-8 border-l-4 border-primary">
+                            <p class="font-label text-[10px] uppercase tracking-[0.2em] text-outline font-black mb-2">
+                                Amount to Pay</p>
+                            <div class="flex items-baseline gap-2">
+                                <span class="font-headline text-5xl font-black text-primary">$5000</span>
+                                <span class="text-outline font-black text-xs uppercase tracking-widest">ARS /
+                                    Month</span>
+                            </div>
+                        </div>
+                        <!-- Fee Breakdown -->
+                        <div class="space-y-4 py-6 border-t border-b border-outline-variant/20">
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest text-outline font-bold">Club
+                                    Membership</span>
+                                <span class="font-headline text-sm font-black text-primary">$1500</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest text-outline font-bold">Monthly
+                                    Training</span>
+                                <span class="font-headline text-sm font-black text-primary">$2500</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest text-outline font-bold">Sports
+                                    Insurance</span>
+                                <span class="font-headline text-sm font-black text-primary">$1000</span>
+                            </div>
+                        </div>
+                        <!-- Confirm Button -->
+                        <button
+                            class="group w-full bg-primary hover:bg-primary-container text-white py-5 flex items-center justify-center gap-4 transition-all duration-300">
+                            <span class="font-headline font-black tracking-[0.1em] text-sm uppercase">Confirm
+                                Payment</span>
+                            <span
+                                class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                        </button>
+                        <p
+                            class="text-center text-[10px] text-outline font-medium px-8 leading-relaxed uppercase tracking-wider">
+                            Agreed to Club Deportivo Las Leonas del Sur terms and policies.
+                        </p>
                     </div>
                 </section>
-                <!-- Category Section: Sub-17 & Sub-14 (Grid Layout) -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Sub-17 Card -->
-                    <section class="bg-surface-container-low rounded-3xl p-6 relative overflow-hidden">
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-6">
-                                <h4 class="text-xl font-bold text-primary">Sub-17</h4>
-                                <span class="material-symbols-outlined text-amber-500" data-icon="star"
-                                    style="font-variation-settings: 'FILL' 1;">star</span>
-                            </div>
-                            <div class="space-y-3">
-                                <div
-                                    class="bg-white p-4 rounded-2xl flex items-center justify-between shadow-sm border border-outline-variant/10 hover:translate-x-1 transition-transform cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center font-bold text-xs">
-                                            SG</div>
-                                        <div>
-                                            <p class="font-bold text-sm text-primary">Sofía García</p>
-                                            <p class="text-[10px] text-on-surface-variant">ID: 00452</p>
-                                        </div>
-                                    </div>
-                                    <span
-                                        class="text-[10px] font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full uppercase">Activa</span>
+                <!-- Transaction History -->
+                <section class="bg-surface-container-low border border-outline-variant/30 p-10 flex flex-col">
+                    <h3 class="font-headline font-black text-xl text-primary tracking-tight mb-10 uppercase">Recent
+                        Transactions</h3>
+                    <div class="space-y-4 flex-1">
+                        <!-- Item 1 -->
+                        <div class="flex items-center justify-between p-5 bg-white border border-outline-variant/20">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-green-50 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-green-700 text-lg">check_circle</span>
                                 </div>
-                                <div
-                                    class="bg-white p-4 rounded-2xl flex items-center justify-between shadow-sm border border-outline-variant/10 hover:translate-x-1 transition-transform cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center font-bold text-xs">
-                                            AM</div>
-                                        <div>
-                                            <p class="font-bold text-sm text-primary">Ana Martínez</p>
-                                            <p class="text-[10px] text-on-surface-variant">ID: 00458</p>
-                                        </div>
-                                    </div>
-                                    <span
-                                        class="text-[10px] font-black bg-red-100 text-red-800 px-2 py-0.5 rounded-full uppercase">Inactiva</span>
+                                <div>
+                                    <p class="font-headline font-black text-xs text-primary uppercase">March Fee Paid
+                                    </p>
+                                    <p class="text-[9px] font-label text-outline uppercase tracking-[0.15em]">Ref:
+                                        #TXN-9921</p>
                                 </div>
                             </div>
-                            <button
-                                class="mt-6 w-full py-3 text-sm font-bold text-primary hover:text-amber-600 flex items-center justify-center gap-2 transition-colors">
-                                Ver todas las jugadoras Sub-17
-                                <span class="material-symbols-outlined text-sm"
-                                    data-icon="arrow_forward">arrow_forward</span>
-                            </button>
-                        </div>
-                    </section>
-                    <!-- Sub-14 Card -->
-                    <section class="bg-primary text-white rounded-3xl p-6 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-8 opacity-10">
-                            <span class="material-symbols-outlined text-9xl"
-                                data-icon="sports_soccer">sports_soccer</span>
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center justify-between mb-6">
-                                <h4 class="text-xl font-bold">Sub-14</h4>
-                                <span
-                                    class="px-2 py-1 bg-amber-400 text-primary text-[10px] font-black rounded uppercase">Promesas</span>
+                            <div class="text-right">
+                                <p class="font-headline font-black text-primary text-sm">$5000</p>
+                                <p class="text-[9px] font-label text-outline uppercase tracking-wider">Mar 05, 2024</p>
                             </div>
-                            <div class="space-y-3">
-                                <div
-                                    class="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex items-center justify-between border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-lg bg-amber-400 text-primary flex items-center justify-center font-bold text-xs">
-                                            EV</div>
-                                        <div>
-                                            <p class="font-bold text-sm">Elena Valdes</p>
-                                            <p class="text-[10px] text-white/60">ID: 00612</p>
-                                        </div>
-                                    </div>
-                                    <span class="material-symbols-outlined text-amber-400 text-sm"
-                                        data-icon="check_circle">check_circle</span>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="flex items-center justify-between p-5 bg-white border border-outline-variant/20">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-green-50 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-green-700 text-lg">check_circle</span>
                                 </div>
-                                <div
-                                    class="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex items-center justify-between border border-white/10 hover:bg-white/20 transition-all cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-8 h-8 rounded-lg bg-amber-400 text-primary flex items-center justify-center font-bold text-xs">
-                                            CP</div>
-                                        <div>
-                                            <p class="font-bold text-sm">Carla Ponce</p>
-                                            <p class="text-[10px] text-white/60">ID: 00615</p>
-                                        </div>
-                                    </div>
-                                    <span class="material-symbols-outlined text-amber-400 text-sm"
-                                        data-icon="check_circle">check_circle</span>
+                                <div>
+                                    <p class="font-headline font-black text-xs text-primary uppercase">February Fee Paid
+                                    </p>
+                                    <p class="text-[9px] font-label text-outline uppercase tracking-[0.15em]">Ref:
+                                        #TXN-8845</p>
                                 </div>
                             </div>
-                            <button
-                                class="mt-6 w-full py-3 text-sm font-bold text-amber-400 hover:text-white flex items-center justify-center gap-2 transition-colors">
-                                Gestionar Categoría Sub-14
-                                <span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
-                            </button>
+                            <div class="text-right">
+                                <p class="font-headline font-black text-primary text-sm">$5000</p>
+                                <p class="text-[9px] font-label text-outline uppercase tracking-wider">Feb 02, 2024</p>
+                            </div>
                         </div>
-                    </section>
-                </div>
-                <!-- Category Section: Infantiles & Sub-12 (Tonal shift section) -->
-                <section class="bg-surface-container-lowest rounded-[2rem] p-10 border border-outline-variant/20">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="bg-secondary-container p-3 rounded-2xl">
-                            <span class="material-symbols-outlined text-on-secondary-container"
-                                data-icon="child_care">child_care</span>
-                        </div>
-                        <div>
-                            <h4 class="text-2xl font-black text-primary tracking-tight">Escuela de Formación</h4>
-                            <p class="text-sm text-on-surface-variant">Infantiles y Sub-12</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                        <!-- Quick Stats / Overview for Juniors -->
-                        <div class="p-4 bg-surface rounded-2xl border border-outline-variant/10 text-center">
-                            <p class="text-3xl font-black text-primary mb-1">42</p>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Total
-                                Niñas</p>
-                        </div>
-                        <div class="p-4 bg-surface rounded-2xl border border-outline-variant/10 text-center">
-                            <p class="text-3xl font-black text-amber-500 mb-1">12</p>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Nuevos
-                                Ingresos</p>
-                        </div>
-                        <div class="p-4 bg-surface rounded-2xl border border-outline-variant/10 text-center">
-                            <p class="text-3xl font-black text-primary mb-1">98%</p>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
-                                Asistencia Med.</p>
-                        </div>
+                        <!-- Item 3 -->
                         <div
-                            class="p-4 bg-primary text-white rounded-2xl text-center flex flex-col justify-center items-center cursor-pointer hover:bg-primary-container transition-colors">
-                            <span class="material-symbols-outlined mb-1" data-icon="list_alt">list_alt</span>
-                            <p class="text-[10px] font-black uppercase tracking-widest">Ver Registro</p>
+                            class="flex items-center justify-between p-5 bg-white border border-outline-variant/20 opacity-60">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-surface-container flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-outline text-lg">receipt_long</span>
+                                </div>
+                                <div>
+                                    <p class="font-headline font-black text-xs text-primary uppercase">January Fee Paid
+                                    </p>
+                                    <p class="text-[9px] font-label text-outline uppercase tracking-[0.15em]">Ref:
+                                        #TXN-7732</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-headline font-black text-primary text-sm">$4500</p>
+                                <p class="text-[9px] font-label text-outline uppercase tracking-wider">Jan 10, 2024</p>
+                            </div>
                         </div>
                     </div>
+                    <button
+                        class="mt-8 py-4 w-full border-2 border-primary font-headline text-[10px] font-black uppercase tracking-[0.2em] text-primary hover:bg-primary hover:text-white transition-all">
+                        Download All Receipts
+                    </button>
                 </section>
             </div>
         </div>
         <!-- Footer Branding -->
-        <footer class="p-8 mt-12 border-t border-outline-variant/10 text-center">
-            <p class="text-xs text-on-surface-variant/40 font-bold uppercase tracking-[0.2em]">Sistema de Gestión
-                Vanguard • Las Leonas del Sur © 2024</p>
+        <footer class="mt-16 pt-8 border-t border-outline-variant/20 flex justify-between items-center text-outline">
+            <p class="text-[10px] font-bold uppercase tracking-widest">© 2024 Club Deportivo Las Leonas del Sur.</p>
+            <div class="flex gap-8">
+                <a class="text-[10px] font-black font-label uppercase tracking-[0.2em] hover:text-primary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="text-[10px] font-black font-label uppercase tracking-[0.2em] hover:text-primary transition-colors"
+                    href="#">Support</a>
+            </div>
         </footer>
     </main>
-    <!-- Contextual FAB for Mobile (Hidden on desktop as per Shell Rules) -->
-    <div class="fixed bottom-8 right-8 md:hidden">
-        <button
-            class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-2xl flex items-center justify-center">
-            <span class="material-symbols-outlined" data-icon="add">add</span>
-        </button>
-    </div>
 </body>
 
 </html>
