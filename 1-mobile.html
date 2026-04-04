@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -83,33 +84,6 @@
         }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-
-        .no-line {
-            border: none !important;
-        }
-
-        .tonal-shifts {
-            background: linear-gradient(180deg, rgba(0, 17, 58, 1) 0%, rgba(0, 23, 74, 1) 100%);
-        }
-
-        .glass-panel {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-
-        .tonal-shift {
-            background: linear-gradient(135deg, #00113a 0%, #002366 100%);
-        }
-
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(0.5);
-            cursor: pointer;
-        }
-
         body {
             min-height: max(884px, 100dvh);
         }
@@ -119,11 +93,10 @@
 <body class="bg-surface font-body text-on-surface min-h-screen pb-24">
     <!-- Top Navigation Bar -->
     <nav
-        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#00113a]/80 backdrop-blur-xl border-b border-[#002366]/10 dark:border-[#f5f7fa]/10 shadow-sm flex justify-between items-center px-6 h-16">
-        <span class="font-headline text-xl font-bold tracking-tighter text-[#00113a] dark:text-[#f5f7fa]">Las Leonas del
-            Sur</span>
+        class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-primary/10 shadow-sm flex justify-between items-center px-6 h-16">
+        <span class="font-headline text-xl font-bold tracking-tighter text-primary">Las Leonas del Sur</span>
         <div class="flex gap-4 items-center">
-            <span class="material-symbols-outlined text-[#002366] dark:text-[#f5f7fa]">notifications</span>
+            <span class="material-symbols-outlined text-primary">notifications</span>
             <div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden">
                 <img alt="Retrato de perfil de una atleta profesional con expresión decidida, iluminación de estudio, alto contraste"
                     class="w-full h-full object-cover"
@@ -255,31 +228,21 @@
     </main>
     <!-- Bottom Navigation Bar -->
     <nav
-        class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-white/90 dark:bg-[#00113a]/90 backdrop-blur-2xl border-t border-slate-100 dark:border-white/5 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] h-20 flex justify-around items-end pb-safe px-4">
-        <!-- Home -->
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:scale-110 transition-transform"
-            href="#">
-            <span class="material-symbols-outlined" data-icon="home">home</span>
-            <span class="font-body text-[10px] font-bold">Inicio</span>
+        class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-white/90 backdrop-blur-2xl border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] h-20 flex justify-around items-end pb-4 px-4">
+        <a class="flex flex-col items-center justify-center bg-primary-container text-white rounded-2xl p-3 mb-1 transition-transform"
+            href="1-mobile.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+            <span class="font-label text-[10px] font-bold">Finanzas</span>
         </a>
-        <!-- Payments (Active) -->
-        <a class="flex flex-col items-center justify-center bg-[#002366] text-white dark:bg-gold-500 dark:text-[#00113a] rounded-2xl p-3 mb-1 transition-transform"
-            href="#">
-            <span class="material-symbols-outlined" data-icon="account_balance_wallet"
-                style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
-            <span class="font-body text-[10px] font-bold">Finanzas</span>
+        <a class="flex flex-col items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform"
+            href="2-mobile.html">
+            <span class="material-symbols-outlined">groups</span>
+            <span class="font-label text-[10px] font-bold">Atletas</span>
         </a>
-        <!-- Team -->
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:scale-110 transition-transform"
-            href="#">
-            <span class="material-symbols-outlined" data-icon="groups">groups</span>
-            <span class="font-body text-[10px] font-bold">Equipo</span>
-        </a>
-        <!-- Profile -->
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:scale-110 transition-transform"
-            href="#">
-            <span class="material-symbols-outlined" data-icon="person">person</span>
-            <span class="font-body text-[10px] font-bold">Cuenta</span>
+        <a class="flex flex-col items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform"
+            href="3-mobile.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span class="font-label text-[10px] font-bold">Recaudación</span>
         </a>
     </nav>
 </body>

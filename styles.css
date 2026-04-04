@@ -1,0 +1,41 @@
+/* ============================================================
+   Shared Styles - Athletic Vanguard / Las Leonas del Sur
+   Modelo: 3-web.html
+   ============================================================ */
+
+/* Material Symbols icon font settings */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+/* Utility */
+.no-line {
+    border: none !important;
+}
+
+/* Gradient backgrounds */
+.tonal-shifts {
+    background: linear-gradient(180deg, rgba(0, 17, 58, 1) 0%, rgba(0, 23, 74, 1) 100%);
+}
+
+.tonal-shift {
+    background: linear-gradient(135deg, #00113a 0%, #002366 100%);
+}
+
+/* Glass morphism effects */
+.glass-panel {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-header {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Date input calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+}

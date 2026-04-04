@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -82,83 +83,52 @@
             },
         }
     </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-
-        .no-line {
-            border: none !important;
-        }
-
-        .tonal-shifts {
-            background: linear-gradient(180deg, rgba(0, 17, 58, 1) 0%, rgba(0, 23, 74, 1) 100%);
-        }
-
-        .tonal-shift {
-            transition: background-color 0.3s ease;
-        }
-
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(0.5);
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body class="bg-surface font-body text-on-surface flex min-h-screen">
     <!-- SideNavBar -->
-    <nav
-        class="h-full w-64 fixed left-0 top-0 bg-white border-r border-outline-variant/30 flex flex-col py-8 gap-4 z-40">
-        <div class="px-8 mb-8">
-            <h1 class="text-primary font-black font-headline text-xl tracking-tighter">LAS LEONAS</h1>
-            <p class="font-label uppercase text-[10px] tracking-[0.2em] text-outline mt-1">Portal de Socios</p>
+    <aside
+        class="fixed left-0 top-0 h-screen w-64 bg-blue-950 shadow-2xl flex flex-col py-8 z-50">
+        <div class="px-6 mb-10">
+            <h1 class="text-2xl font-black text-white italic font-headline">La Vanguardia</h1>
+            <p class="text-amber-400 text-xs font-headline tracking-widest uppercase mt-1">Portal Admin</p>
         </div>
-        <div class="flex-1 flex flex-col gap-1 px-4">
-            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
-                href="#">
-                <span class="material-symbols-outlined text-xl">dashboard</span>
-                Inicio
+        <nav class="flex-1">
+            <a href="1-web.html"
+                class="bg-blue-900 text-amber-400 rounded-r-full mr-4 py-3 px-6 mb-2 flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                <span>Finanzas</span>
             </a>
-            <a class="flex items-center gap-4 py-3 px-4 bg-primary text-white font-bold font-label uppercase text-[10px] tracking-widest"
-                href="#">
-                <span class="material-symbols-outlined text-xl">payments</span>
-                Pagos
+            <a href="2-web.html"
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined">groups</span>
+                <span>Atletas</span>
             </a>
-            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
-                href="#">
-                <span class="material-symbols-outlined text-xl">query_stats</span>
-                Estadísticas
+            <a href="3-web.html"
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all flex items-center gap-3 font-label">
+                <span class="material-symbols-outlined">payments</span>
+                <span>Recaudación</span>
             </a>
-            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
-                href="#">
-                <span class="material-symbols-outlined text-xl">calendar_today</span>
-                Calendario
-            </a>
-            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:bg-surface-container hover:text-primary transition-all font-label uppercase text-[10px] tracking-widest"
-                href="#">
-                <span class="material-symbols-outlined text-xl">person</span>
-                Perfil
-            </a>
-        </div>
-        <div class="mt-auto px-4 flex flex-col gap-1 border-t border-outline-variant/20 pt-6">
+        </nav>
+        <div class="px-6 mb-6">
             <button
-                class="w-full bg-primary text-white py-4 font-headline font-bold text-xs tracking-[0.1em] uppercase hover:bg-primary-container transition-colors">
-                Registrar Pago
+                class="w-full py-3 bg-secondary-container text-on-secondary-container rounded-xl font-bold text-sm shadow-lg active:scale-95 transition-transform">
+                Nueva Transacción
             </button>
-            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:text-primary font-label uppercase text-[10px] tracking-widest mt-4"
-                href="#">
-                <span class="material-symbols-outlined text-xl">help</span>
-                Soporte
-            </a>
-            <a class="flex items-center gap-4 py-3 px-4 text-outline hover:text-primary font-label uppercase text-[10px] tracking-widest"
-                href="#">
-                <span class="material-symbols-outlined text-xl">logout</span>
-                Cerrar Sesión
-            </a>
         </div>
-    </nav>
+        <footer class="border-t border-white/10 pt-4">
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 text-sm font-label">
+                <span class="material-symbols-outlined">help</span>
+                <span>Centro de Ayuda</span>
+            </div>
+            <div
+                class="text-slate-300 py-3 px-6 mb-2 hover:bg-blue-900/50 hover:text-white transition-all cursor-pointer flex items-center gap-3 text-sm font-label">
+                <span class="material-symbols-outlined">logout</span>
+                <span>Cerrar Sesión</span>
+            </div>
+        </footer>
+    </aside>
     <!-- Main Canvas -->
     <main class="flex-1 ml-64 p-12">
         <!-- Header Section -->

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Admin Payment Portal | The Athletic Vanguard</title>
+    <title>Portal de Recaudación | La Vanguardia Atlética</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
@@ -13,9 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -86,27 +84,6 @@
         }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        body {
-            font-family: 'Manrope', sans-serif;
-        }
-
-        h1,
-        h2,
-        h3,
-        .font-headline {
-            font-family: 'Lexend', sans-serif;
-        }
-
-        .glass-header {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-        }
-    </style>
-    <style>
         body {
             min-height: max(884px, 100dvh);
         }
@@ -115,21 +92,20 @@
 
 <body class="bg-background text-on-background min-h-screen pb-24">
     <!-- TopAppBar -->
-    <header
-        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-blue-950/80 backdrop-blur-md shadow-sm dark:shadow-none h-16 flex justify-between items-center px-6">
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-primary/10 shadow-sm flex justify-between items-center px-6 h-16">
         <div class="flex items-center gap-4">
             <button
-                class="text-blue-900 dark:text-blue-100 hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors p-2 rounded-full active:scale-95 duration-200">
+                class="text-primary hover:bg-surface-container-low transition-colors p-2 rounded-full active:scale-95 duration-200">
                 <span class="material-symbols-outlined">menu</span>
             </button>
-            <h1 class="text-xl font-bold text-blue-900 dark:text-blue-50 uppercase font-['Lexend'] tracking-tight">
-                Recaudación</h1>
+            <h1 class="text-xl font-bold text-primary uppercase font-headline tracking-tight">Recaudación</h1>
         </div>
         <button
-            class="text-blue-900 dark:text-blue-100 hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors p-2 rounded-full active:scale-95 duration-200">
+            class="text-primary hover:bg-surface-container-low transition-colors p-2 rounded-full active:scale-95 duration-200">
             <span class="material-symbols-outlined">filter_list</span>
         </button>
-    </header>
+    </nav>
     <main class="pt-20 px-4 space-y-6">
         <!-- Total Summary Card - Athletic Vanguard Style -->
         <section
@@ -139,11 +115,11 @@
                     style="font-variation-settings: 'FILL' 1;">payments</span>
             </div>
             <div class="relative z-10">
-                <p class="text-on-primary/70 font-headline text-xs uppercase tracking-widest mb-1">Total Collected</p>
+                <p class="text-on-primary/70 font-headline text-xs uppercase tracking-widest mb-1">Total Recaudado</p>
                 <h2 class="text-4xl font-extrabold font-headline tracking-tighter mb-4">$142,500.00</h2>
                 <div class="flex items-center gap-2 text-secondary-container">
                     <span class="material-symbols-outlined text-sm">trending_up</span>
-                    <span class="text-xs font-bold uppercase tracking-wider">12% vs last month</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">12% vs mes anterior</span>
                 </div>
             </div>
         </section>
@@ -171,8 +147,8 @@
         <!-- Transactions List -->
         <section class="space-y-4">
             <div class="flex justify-between items-end px-1">
-                <h3 class="font-headline font-bold text-primary tracking-tight">Recent Payments</h3>
-                <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">October 2023</span>
+                <h3 class="font-headline font-bold text-primary tracking-tight">Pagos Recientes</h3>
+                <span class="text-[10px] font-bold text-secondary uppercase tracking-widest">Octubre 2023</span>
             </div>
             <div class="space-y-2">
                 <!-- Transaction Item 1 -->
@@ -187,12 +163,12 @@
                         </div>
                         <div>
                             <p class="font-bold text-primary text-sm">Mateo Gonzalez</p>
-                            <p class="text-[10px] font-bold text-outline uppercase">Sub-12 • Membership</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-12 • Membresía</p>
                         </div>
                     </div>
                     <div class="text-right">
                         <p class="font-headline font-extrabold text-primary">$12,400</p>
-                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Exitoso</p>
                     </div>
                 </div>
                 <!-- Transaction Item 2 -->
@@ -207,12 +183,12 @@
                         </div>
                         <div>
                             <p class="font-bold text-primary text-sm">Valentina Perez</p>
-                            <p class="text-[10px] font-bold text-outline uppercase">Sub-15 • Tournament Fee</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-15 • Cuota de Torneo</p>
                         </div>
                     </div>
                     <div class="text-right">
                         <p class="font-headline font-extrabold text-primary">$8,500</p>
-                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Exitoso</p>
                     </div>
                 </div>
                 <!-- Transaction Item 3 -->
@@ -227,12 +203,12 @@
                         </div>
                         <div>
                             <p class="font-bold text-primary text-sm">Lucas Silva</p>
-                            <p class="text-[10px] font-bold text-outline uppercase">Sub-10 • Membership</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-10 • Membresía</p>
                         </div>
                     </div>
                     <div class="text-right">
                         <p class="font-headline font-extrabold text-primary">$12,400</p>
-                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Exitoso</p>
                     </div>
                 </div>
                 <!-- Transaction Item 4 -->
@@ -247,12 +223,12 @@
                         </div>
                         <div>
                             <p class="font-bold text-primary text-sm">Sofia Ramirez</p>
-                            <p class="text-[10px] font-bold text-outline uppercase">Sub-17 • Equipment</p>
+                            <p class="text-[10px] font-bold text-outline uppercase">Sub-17 • Equipamiento</p>
                         </div>
                     </div>
                     <div class="text-right">
                         <p class="font-headline font-extrabold text-primary">$15,200</p>
-                        <p class="text-[10px] text-green-600 font-bold uppercase">Success</p>
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Exitoso</p>
                     </div>
                 </div>
             </div>
@@ -260,7 +236,7 @@
         <!-- Stats Visualization (Bento-style detail) -->
         <section class="grid grid-cols-2 gap-4 pt-4">
             <div class="bg-surface-container-low p-4 rounded-xl">
-                <p class="text-[10px] font-bold text-outline uppercase mb-2">Players Paid</p>
+                <p class="text-[10px] font-bold text-outline uppercase mb-2">Jugadores al Día</p>
                 <div class="flex items-baseline gap-1">
                     <span class="text-2xl font-headline font-extrabold text-primary">84</span>
                     <span class="text-xs font-bold text-primary/60">/ 120</span>
@@ -270,37 +246,32 @@
                 </div>
             </div>
             <div class="bg-surface-container-low p-4 rounded-xl">
-                <p class="text-[10px] font-bold text-outline uppercase mb-2">Pending</p>
+                <p class="text-[10px] font-bold text-outline uppercase mb-2">Pendiente</p>
                 <div class="flex items-baseline gap-1">
                     <span class="text-2xl font-headline font-extrabold text-error">$42.1k</span>
                 </div>
-                <p class="text-[9px] font-bold text-error uppercase mt-3">Requires Action</p>
+                <p class="text-[9px] font-bold text-error uppercase mt-3">Requiere Atención</p>
             </div>
         </section>
     </main>
     <!-- BottomNavBar -->
     <nav
-        class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white/90 dark:bg-blue-950/90 backdrop-blur-xl z-50 border-t border-blue-900/10 dark:border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-xl">
-        <div
-            class="flex flex-col items-center justify-center text-blue-400 dark:text-blue-500 hover:text-blue-900 dark:hover:text-white transition-all active:scale-90 duration-200">
-            <span class="material-symbols-outlined">dashboard</span>
-            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Overview</span>
-        </div>
-        <div
-            class="flex flex-col items-center justify-center bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 rounded-xl px-3 py-1.5 active:scale-90 duration-200">
+        class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-white/90 backdrop-blur-2xl border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] h-20 flex justify-around items-end pb-4 px-4">
+        <a class="flex flex-col items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform"
+            href="1-mobile.html">
+            <span class="material-symbols-outlined">account_balance_wallet</span>
+            <span class="font-label text-[10px] font-bold">Finanzas</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform"
+            href="2-mobile.html">
+            <span class="material-symbols-outlined">groups</span>
+            <span class="font-label text-[10px] font-bold">Atletas</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-primary-container text-white rounded-2xl p-3 mb-1 transition-transform"
+            href="3-mobile.html">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
-            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Payments</span>
-        </div>
-        <div
-            class="flex flex-col items-center justify-center text-blue-400 dark:text-blue-500 hover:text-blue-900 dark:hover:text-white transition-all active:scale-90 duration-200">
-            <span class="material-symbols-outlined">receipt_long</span>
-            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Invoices</span>
-        </div>
-        <div
-            class="flex flex-col items-center justify-center text-blue-400 dark:text-blue-500 hover:text-blue-900 dark:hover:text-white transition-all active:scale-90 duration-200">
-            <span class="material-symbols-outlined">settings</span>
-            <span class="font-['Lexend'] text-[10px] font-semibold uppercase tracking-wider">Settings</span>
-        </div>
+            <span class="font-label text-[10px] font-bold">Recaudación</span>
+        </a>
     </nav>
 </body>
 
