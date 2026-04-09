@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de compras | ShopNow</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #eef1f7;
+      color: #1a1a2e;
+      font-size: 14px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: #1a1a2e;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    }
+
+    .ml-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .ml-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #ff6b35, #e8357a);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: -1px;
+    }
+
+    .ml-logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .header-search {
+      flex: 1;
+      max-width: 660px;
+      display: flex;
+    }
+
+    .header-search input {
+      flex: 1;
+      border: none;
+      padding: 10px 14px;
+      font-size: 14px;
+      border-radius: 2px 0 0 2px;
+      outline: none;
+    }
+
+    .header-search button {
+      background: #ff6b35;
+      border: none;
+      padding: 0 16px;
+      border-radius: 0 2px 2px 0;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-left: auto;
+      font-size: 13px;
+      color: #c8cfe0;
+    }
+
+    .header-nav a { color: #c8cfe0; text-decoration: none; }
+    .header-nav a:hover { color: #ff6b35; text-decoration: none; }
+
+    .cart-badge {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .cart-badge .badge {
+      background: #ff6b35;
+      color: #fff;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -6px;
+      right: -8px;
+    }
+
+    .cart-icon { font-size: 22px; }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    /* ── LEFT COLUMN ── */
+    .cart-left { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+
+    /* breadcrumb */
+    .breadcrumb {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .breadcrumb a { color: #7c5cbf; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    h1.cart-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    /* ── SELLER GROUP ── */
+    .seller-group {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(124,92,191,.1);
+    }
+
+    .seller-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid #ebebeb;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .seller-header strong { color: #7c5cbf; }
+
+    .free-shipping-badge {
+      background: #0d9e6e;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-left: auto;
+    }
+
+    /* ── CART ITEM ── */
+    .cart-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      border-bottom: 1px solid #f0f0f0;
+      position: relative;
+    }
+
+    .cart-item:last-child { border-bottom: none; }
+
+    .item-checkbox {
+      width: 18px;
+      height: 18px;
+      accent-color: #ff6b35;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .item-image {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 4px;
+      border: 1px solid #f0f0f0;
+      flex-shrink: 0;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+
+    .item-info { flex: 1; }
+
+    .item-name {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .item-condition {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    .item-price-original {
+      font-size: 12px;
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .item-price {
+      font-size: 22px;
+      font-weight: 300;
+      color: #333;
+    }
+
+    .item-price sup { font-size: 13px; font-weight: 400; vertical-align: super; }
+    .item-price sub { font-size: 14px; vertical-align: baseline; }
+
+    .item-discount {
+      font-size: 12px;
+      color: #0d9e6e;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+
+    .item-installments {
+      font-size: 13px;
+      color: #0d9e6e;
+      margin-top: 2px;
+    }
+
+    .item-stock-warning {
+      font-size: 12px;
+      color: #f73;
+      margin-top: 4px;
+    }
+
+    .item-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    /* quantity stepper */
+    .qty-stepper {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .qty-btn {
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      color: #7c5cbf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .15s;
+    }
+
+    .qty-btn:hover { background: #f4f0ff; }
+    .qty-btn:disabled { color: #ccc; cursor: default; }
+
+    .qty-value {
+      width: 36px;
+      text-align: center;
+      font-size: 14px;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      padding: 6px 0;
+    }
+
+    .btn-remove {
+      background: none;
+      border: none;
+      color: #7c5cbf;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .btn-remove:hover { text-decoration: underline; }
+
+    /* ── SELECT ALL BAR ── */
+    .select-all-bar {
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(124,92,191,.1);
+    }
+
+    .select-all-bar label { cursor: pointer; }
+
+    .btn-remove-selected {
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: #7c5cbf;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .btn-remove-selected:hover { text-decoration: underline; }
+
+    /* ── PROMO BAR ── */
+    .promo-bar {
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #666;
+      box-shadow: 0 2px 8px rgba(124,92,191,.1);
+    }
+
+    .promo-icon { font-size: 20px; }
+
+    /* ── RIGHT COLUMN (summary) ── */
+    .cart-summary {
+      width: 320px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .summary-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(124,92,191,.1);
+    }
+
+    .summary-card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .summary-row.discount { color: #0d9e6e; }
+
+    .summary-row .label { color: #666; }
+
+    .summary-divider {
+      border: none;
+      border-top: 1px solid #ebebeb;
+      margin: 14px 0;
+    }
+
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .summary-savings {
+      font-size: 13px;
+      color: #0d9e6e;
+      text-align: right;
+      margin-bottom: 16px;
+    }
+
+    .btn-checkout {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #ff6b35, #e8357a);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: opacity .15s;
+    }
+
+    .btn-checkout:hover { opacity: 0.88; }
+
+    .summary-note {
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .security-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .security-badges span { font-size: 16px; }
+
+    /* coupon input */
+    .coupon-section { margin-top: 14px; }
+
+    .coupon-toggle {
+      font-size: 13px;
+      color: #7c5cbf;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .coupon-input-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .coupon-input-row input {
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .coupon-input-row input:focus { border-color: #7c5cbf; }
+
+    .btn-apply-coupon {
+      background: none;
+      border: 1px solid #ff6b35;
+      color: #7c5cbf;
+      border-radius: 4px;
+      padding: 8px 14px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .btn-apply-coupon:hover { background: #f4f0ff; }
+
+    /* installments card */
+    .installments-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 8px rgba(124,92,191,.1);
+      font-size: 13px;
+    }
+
+    .installments-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .installments-card p { color: #555; line-height: 1.5; }
+
+    .installments-card .highlight { color: #0d9e6e; font-weight: 600; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #fff;
+      margin-top: 40px;
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      border-top: 1px solid #ebebeb;
+    }
+
+    footer a { color: #7c5cbf; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════ HEADER ══════════════════════════ -->
+<header>
+  <a class="ml-logo" href="#">
+    <div class="ml-logo-icon">ML</div>
+    <span class="ml-logo-text">ShopNow</span>
+  </a>
+
+  <div class="header-search">
+    <input type="text" placeholder="Buscar productos, marcas y más…" />
+    <button>&#128269;</button>
+  </div>
+
+  <nav class="header-nav">
+    <a href="#">Categorías</a>
+    <a href="#">Ofertas</a>
+    <a href="#">Historial</a>
+    <a href="#">Vender</a>
+    <a href="#">Ayuda</a>
+    <a href="#">Ingresá</a>
+    <div class="cart-badge">
+      <span class="cart-icon">&#128722;</span>
+      <span class="badge">4</span>
+    </div>
+  </nav>
+</header>
+
+<!-- ══════════════════════════ MAIN ══════════════════════════ -->
+<main>
+
+  <!-- ── LEFT ── -->
+  <section class="cart-left">
+
+    <div>
+      <p class="breadcrumb"><a href="#">Inicio</a> / Carrito de compras</p>
+      <h1 class="cart-title">Mi carrito</h1>
+    </div>
+
+    <!-- select-all bar -->
+    <div class="select-all-bar">
+      <input type="checkbox" class="item-checkbox" id="chk-all" checked />
+      <label for="chk-all"><strong>Seleccionar todos</strong> (4 productos)</label>
+      <button class="btn-remove-selected">Eliminar seleccionados</button>
+    </div>
+
+    <!-- ─── VENDEDOR 1 ─── -->
+    <div class="seller-group">
+      <div class="seller-header">
+        &#127978; Vendido por <strong>&nbsp;TecnoPlaza Oficial</strong>
+        <span class="free-shipping-badge">&#128230; Envío gratis</span>
+      </div>
+
+      <!-- producto 1 -->
+      <div class="cart-item">
+        <input type="checkbox" class="item-checkbox" checked />
+        <div class="item-image">&#128241;</div>
+        <div class="item-info">
+          <p class="item-name">Celular Samsung Galaxy A55 5G 256GB 8GB RAM Negro — Liberado</p>
+          <p class="item-condition">Nuevo &nbsp;|&nbsp; +200 vendidos</p>
+          <p class="item-price-original">$ 749.999</p>
+          <p>
+            <span class="item-price"><sup>$</sup>599<sub>.999</sub></span>
+            <span class="item-discount">20% OFF</span>
+          </p>
+          <p class="item-installments">en 12 cuotas de <strong>$ 54.999</strong> sin interés</p>
+        </div>
+        <div class="item-actions">
+          <div class="qty-stepper">
+            <button class="qty-btn" disabled>&#8722;</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn">&#43;</button>
+          </div>
+          <button class="btn-remove">Eliminar</button>
+        </div>
+      </div>
+
+      <!-- producto 2 -->
+      <div class="cart-item">
+        <input type="checkbox" class="item-checkbox" checked />
+        <div class="item-image">&#127911;</div>
+        <div class="item-info">
+          <p class="item-name">Auriculares Inalámbricos Sony WH-1000XM5 Noise Cancelling Bluetooth — Plateado</p>
+          <p class="item-condition">Nuevo &nbsp;|&nbsp; +500 vendidos</p>
+          <p class="item-price-original">$ 289.999</p>
+          <p>
+            <span class="item-price"><sup>$</sup>239<sub>.999</sub></span>
+            <span class="item-discount">17% OFF</span>
+          </p>
+          <p class="item-installments">en 6 cuotas de <strong>$ 39.999</strong> sin interés</p>
+          <p class="item-stock-warning">&#9888; ¡Últimas 3 unidades disponibles!</p>
+        </div>
+        <div class="item-actions">
+          <div class="qty-stepper">
+            <button class="qty-btn" disabled>&#8722;</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn">&#43;</button>
+          </div>
+          <button class="btn-remove">Eliminar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── VENDEDOR 2 ─── -->
+    <div class="seller-group">
+      <div class="seller-header">
+        &#127978; Vendido por <strong>&nbsp;HogarTotal Store</strong>
+        <span class="free-shipping-badge">&#128230; Envío gratis</span>
+      </div>
+
+      <!-- producto 3 -->
+      <div class="cart-item">
+        <input type="checkbox" class="item-checkbox" checked />
+        <div class="item-image">&#128421;</div>
+        <div class="item-info">
+          <p class="item-name">Monitor Gamer LG UltraGear 27" 165Hz 1ms QHD IPS — Negro</p>
+          <p class="item-condition">Nuevo &nbsp;|&nbsp; Full HD / QHD</p>
+          <p class="item-price-original">$ 449.999</p>
+          <p>
+            <span class="item-price"><sup>$</sup>379<sub>.999</sub></span>
+            <span class="item-discount">15% OFF</span>
+          </p>
+          <p class="item-installments">en 18 cuotas de <strong>$ 21.111</strong> sin interés</p>
+        </div>
+        <div class="item-actions">
+          <div class="qty-stepper">
+            <button class="qty-btn" disabled>&#8722;</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn">&#43;</button>
+          </div>
+          <button class="btn-remove">Eliminar</button>
+        </div>
+      </div>
+
+      <!-- producto 4 -->
+      <div class="cart-item">
+        <input type="checkbox" class="item-checkbox" checked />
+        <div class="item-image">&#9197;</div>
+        <div class="item-info">
+          <p class="item-name">Teclado Mecánico Redragon K552 KUMARA RGB — Switch Red — Español Latino</p>
+          <p class="item-condition">Nuevo &nbsp;|&nbsp; Compatible PC / Mac</p>
+          <p>
+            <span class="item-price"><sup>$</sup>54<sub>.999</sub></span>
+          </p>
+          <p class="item-installments">en 3 cuotas de <strong>$ 18.333</strong> sin interés</p>
+        </div>
+        <div class="item-actions">
+          <div class="qty-stepper">
+            <button class="qty-btn">&#8722;</button>
+            <span class="qty-value">2</span>
+            <button class="qty-btn">&#43;</button>
+          </div>
+          <button class="btn-remove">Eliminar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- promo bar -->
+    <div class="promo-bar">
+      <span class="promo-icon">&#127881;</span>
+      <span>¡Comprando con ShopPay acumulás <strong>Shop Points</strong> en todas tus compras!</span>
+    </div>
+
+  </section>
+
+  <!-- ── RIGHT (RESUMEN) ── -->
+  <aside class="cart-summary">
+
+    <div class="summary-card">
+      <h2>Resumen de compra</h2>
+
+      <div class="summary-row">
+        <span class="label">Productos (4)</span>
+        <span>$ 1.274.996</span>
+      </div>
+      <div class="summary-row discount">
+        <span class="label">Descuentos</span>
+        <span>&#8722; $ 219.999</span>
+      </div>
+      <div class="summary-row">
+        <span class="label">Envío</span>
+        <span style="color:#00a650; font-weight:600;">Gratis</span>
+      </div>
+
+      <hr class="summary-divider" />
+
+      <div class="summary-total">
+        <span>Total</span>
+        <span>$ 1.054.997</span>
+      </div>
+      <p class="summary-savings">Ahorras $ 219.999 en esta compra</p>
+
+      <button class="btn-checkout">Continuar compra</button>
+      <p class="summary-note">o en hasta 18 cuotas sin interés</p>
+
+      <div class="security-badges">
+        <span>&#128274;</span> Compra 100% segura con ShopPay
+      </div>
+
+      <div class="coupon-section">
+        <button class="coupon-toggle">&#43; Agregar cupón de descuento</button>
+        <div class="coupon-input-row">
+          <input type="text" placeholder="Ingresá tu código" />
+          <button class="btn-apply-coupon">Aplicar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="installments-card">
+      <h3>&#128179; Medios de pago</h3>
+      <p>Pagá en hasta <span class="highlight">18 cuotas sin interés</span> con tarjetas seleccionadas. También podés pagar con <span class="highlight">ShopPay</span>, transferencia bancaria o efectivo.</p>
+    </div>
+
+  </aside>
+</main>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer>
+  <p>
+    <a href="#">Términos y condiciones</a> &nbsp;|&nbsp;
+    <a href="#">Cómo cuidamos tu privacidad</a> &nbsp;|&nbsp;
+    <a href="#">Accesibilidad</a> &nbsp;|&nbsp;
+    <a href="#">Ayuda</a>
+  </p>
+  <p style="margin-top:8px;">Copyright &copy; 1999–2026 ShopNow S.R.L.</p>
+</footer>
+
+</body>
+</html>
